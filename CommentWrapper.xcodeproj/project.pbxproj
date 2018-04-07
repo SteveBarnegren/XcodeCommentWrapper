@@ -12,6 +12,12 @@
 		67A3C074207822B000E93876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67A3C073207822B000E93876 /* Assets.xcassets */; };
 		67A3C077207822B000E93876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67A3C075207822B000E93876 /* Main.storyboard */; };
 		67A3C083207822B100E93876 /* CommentWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C082207822B100E93876 /* CommentWrapperTests.swift */; };
+		67A3C094207822DD00E93876 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A3C093207822DD00E93876 /* Cocoa.framework */; };
+		67A3C097207822DD00E93876 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C096207822DD00E93876 /* SourceEditorExtension.swift */; };
+		67A3C099207822DD00E93876 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C098207822DD00E93876 /* SourceEditorCommand.swift */; };
+		67A3C09E207822DD00E93876 /* CommentWrapperExt.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 67A3C091207822DD00E93876 /* CommentWrapperExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		67A3C0A42078260E00E93876 /* CommentWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0A32078260E00E93876 /* CommentWrapper.swift */; };
+		67A3C0A5207829FB00E93876 /* CommentWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0A32078260E00E93876 /* CommentWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +28,28 @@
 			remoteGlobalIDString = 67A3C06B207822B000E93876;
 			remoteInfo = CommentWrapper;
 		};
+		67A3C09C207822DD00E93876 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67A3C064207822B000E93876 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67A3C090207822DD00E93876;
+			remoteInfo = CommentWrapperExt;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		67A3C0A2207822DD00E93876 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				67A3C09E207822DD00E93876 /* CommentWrapperExt.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		67A3C06C207822B000E93876 /* CommentWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommentWrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +62,13 @@
 		67A3C07E207822B100E93876 /* CommentWrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommentWrapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A3C082207822B100E93876 /* CommentWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentWrapperTests.swift; sourceTree = "<group>"; };
 		67A3C084207822B100E93876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67A3C091207822DD00E93876 /* CommentWrapperExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CommentWrapperExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		67A3C093207822DD00E93876 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		67A3C096207822DD00E93876 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		67A3C098207822DD00E93876 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		67A3C09A207822DD00E93876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67A3C09B207822DD00E93876 /* CommentWrapperExt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CommentWrapperExt.entitlements; sourceTree = "<group>"; };
+		67A3C0A32078260E00E93876 /* CommentWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +86,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		67A3C08E207822DD00E93876 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67A3C094207822DD00E93876 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -60,6 +102,8 @@
 			children = (
 				67A3C06E207822B000E93876 /* CommentWrapper */,
 				67A3C081207822B100E93876 /* CommentWrapperTests */,
+				67A3C095207822DD00E93876 /* CommentWrapperExt */,
+				67A3C092207822DD00E93876 /* Frameworks */,
 				67A3C06D207822B000E93876 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +113,7 @@
 			children = (
 				67A3C06C207822B000E93876 /* CommentWrapper.app */,
 				67A3C07E207822B100E93876 /* CommentWrapperTests.xctest */,
+				67A3C091207822DD00E93876 /* CommentWrapperExt.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +140,26 @@
 			path = CommentWrapperTests;
 			sourceTree = "<group>";
 		};
+		67A3C092207822DD00E93876 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67A3C093207822DD00E93876 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67A3C095207822DD00E93876 /* CommentWrapperExt */ = {
+			isa = PBXGroup;
+			children = (
+				67A3C096207822DD00E93876 /* SourceEditorExtension.swift */,
+				67A3C098207822DD00E93876 /* SourceEditorCommand.swift */,
+				67A3C0A32078260E00E93876 /* CommentWrapper.swift */,
+				67A3C09A207822DD00E93876 /* Info.plist */,
+				67A3C09B207822DD00E93876 /* CommentWrapperExt.entitlements */,
+			);
+			path = CommentWrapperExt;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,10 +170,12 @@
 				67A3C068207822B000E93876 /* Sources */,
 				67A3C069207822B000E93876 /* Frameworks */,
 				67A3C06A207822B000E93876 /* Resources */,
+				67A3C0A2207822DD00E93876 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				67A3C09D207822DD00E93876 /* PBXTargetDependency */,
 			);
 			name = CommentWrapper;
 			productName = CommentWrapper;
@@ -133,6 +200,23 @@
 			productReference = 67A3C07E207822B100E93876 /* CommentWrapperTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		67A3C090207822DD00E93876 /* CommentWrapperExt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67A3C09F207822DD00E93876 /* Build configuration list for PBXNativeTarget "CommentWrapperExt" */;
+			buildPhases = (
+				67A3C08D207822DD00E93876 /* Sources */,
+				67A3C08E207822DD00E93876 /* Frameworks */,
+				67A3C08F207822DD00E93876 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommentWrapperExt;
+			productName = CommentWrapperExt;
+			productReference = 67A3C091207822DD00E93876 /* CommentWrapperExt.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -152,6 +236,10 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 67A3C06B207822B000E93876;
 					};
+					67A3C090207822DD00E93876 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 67A3C067207822B000E93876 /* Build configuration list for PBXProject "CommentWrapper" */;
@@ -169,6 +257,7 @@
 			targets = (
 				67A3C06B207822B000E93876 /* CommentWrapper */,
 				67A3C07D207822B100E93876 /* CommentWrapperTests */,
+				67A3C090207822DD00E93876 /* CommentWrapperExt */,
 			);
 		};
 /* End PBXProject section */
@@ -184,6 +273,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		67A3C07C207822B100E93876 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67A3C08F207822DD00E93876 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -207,6 +303,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				67A3C083207822B100E93876 /* CommentWrapperTests.swift in Sources */,
+				67A3C0A5207829FB00E93876 /* CommentWrapper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67A3C08D207822DD00E93876 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67A3C097207822DD00E93876 /* SourceEditorExtension.swift in Sources */,
+				67A3C0A42078260E00E93876 /* CommentWrapper.swift in Sources */,
+				67A3C099207822DD00E93876 /* SourceEditorCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +324,11 @@
 			isa = PBXTargetDependency;
 			target = 67A3C06B207822B000E93876 /* CommentWrapper */;
 			targetProxy = 67A3C07F207822B100E93876 /* PBXContainerItemProxy */;
+		};
+		67A3C09D207822DD00E93876 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67A3C090207822DD00E93876 /* CommentWrapperExt */;
+			targetProxy = 67A3C09C207822DD00E93876 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -341,14 +453,18 @@
 		67A3C088207822B100E93876 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CommentWrapper/CommentWrapper.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VAA3W4LPY2;
 				INFOPLIST_FILE = CommentWrapper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SteveBarnegren.CommentWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -356,14 +472,18 @@
 		67A3C089207822B100E93876 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CommentWrapper/CommentWrapper.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VAA3W4LPY2;
 				INFOPLIST_FILE = CommentWrapper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SteveBarnegren.CommentWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -400,6 +520,42 @@
 			};
 			name = Release;
 		};
+		67A3C0A0207822DD00E93876 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CommentWrapperExt/CommentWrapperExt.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VAA3W4LPY2;
+				INFOPLIST_FILE = CommentWrapperExt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SteveBarnegren.CommentWrapper.CommentWrapperExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		67A3C0A1207822DD00E93876 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CommentWrapperExt/CommentWrapperExt.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VAA3W4LPY2;
+				INFOPLIST_FILE = CommentWrapperExt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SteveBarnegren.CommentWrapper.CommentWrapperExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -426,6 +582,15 @@
 			buildConfigurations = (
 				67A3C08B207822B100E93876 /* Debug */,
 				67A3C08C207822B100E93876 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67A3C09F207822DD00E93876 /* Build configuration list for PBXNativeTarget "CommentWrapperExt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67A3C0A0207822DD00E93876 /* Debug */,
+				67A3C0A1207822DD00E93876 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

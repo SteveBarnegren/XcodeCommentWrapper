@@ -9,28 +9,75 @@
 import XCTest
 @testable import CommentWrapper
 
+/*
+ ant
+ bear
+ cat
+ dog
+ emu
+ fox
+ gecko
+ heron
+ iguana
+ jellyfish
+ koala
+ lion
+ monkey
+ newt
+ octopus
+ parrot
+ quail
+ rabbit
+ sheep
+ tiger
+ uakari
+ vole
+ walrus
+ xenopus
+ yak
+ zebra
+ */
+
 class CommentWrapperTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    private func alphabeticalAnimals() -> String {
+        return "ant bear cat dog emu fox gecko heron iguana jellyfish koala lion monkey newt octopus parrot quail rabbit sheep tiger uakari vole walrus xenopus yak zebra"
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testWrapsLines() {
+        
+        let input = alphabeticalAnimals()
+        
+        //////////////////////////////////////// <-- Guide (40 chars)
+        let expected = """
+        ant bear cat dog emu fox gecko heron
+        iguana jellyfish koala lion monkey newt
+        octopus parrot quail rabbit sheep tiger
+        uakari vole walrus xenopus yak zebra
+        """
+        
+        let commentWrapper = CommentWrapper()
+        let output = commentWrapper.wrap(string: input, lineLength: 40)
+        
+        XCTAssertEqual(output, expected)
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testWrapsLinesWithMultipleSpaces() {
+        
+        let input = alphabeticalAnimals().replacingOccurrences(of: " ", with: "  ")
+        
+        //////////////////////////////////////// <-- Guide (40 chars)
+        let expected = """
+        ant  bear  cat  dog  emu  fox  gecko
+        heron  iguana  jellyfish  koala  lion
+        monkey  newt  octopus  parrot  quail
+        rabbit  sheep  tiger  uakari  vole
+        walrus  xenopus  yak  zebra
+        """
+        
+        let commentWrapper = CommentWrapper()
+        let output = commentWrapper.wrap(string: input, lineLength: 40)
+        
+        XCTAssertEqual(output, expected)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
