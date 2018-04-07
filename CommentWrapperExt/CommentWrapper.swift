@@ -46,8 +46,34 @@ class CommentWrapper {
 
     func wrap(string: String, lineLength: Int) -> String {
         
-        let items = itemize(string: string)
-        return wrap(items: items, lineLength: lineLength)
+        let prefix = commentPrefix(fromString: string)
+        let unprefixedString = String(
+            string.suffix(from: string.index(string.startIndex, offsetBy: prefix.count))
+        )
+        let items = itemize(string: unprefixedString)
+        let wrappedString = wrap(items: items, lineLength: lineLength)
+    
+        let wrappedWithPrefix = wrappedString
+            .lines()
+            .map { prefix.appending($0) }
+            .joined(separator: "\n")
+    
+        return wrappedWithPrefix
+    }
+    
+    func commentPrefix(fromString string: String) -> String {
+        
+        var prefix = String()
+        
+        for character in string {
+            if character == " " || character == "/" {
+                prefix.append(character)
+            } else {
+                return prefix
+            }
+        }
+        
+        return prefix
     }
     
     func itemize(string: String) -> [StringItem] {
