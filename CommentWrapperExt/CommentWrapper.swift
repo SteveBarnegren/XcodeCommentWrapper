@@ -22,42 +22,6 @@ enum StringItem {
     }
 }
 
-extension String {
-    
-    func lines() -> [String] {
-        return self.components(separatedBy: "\n")
-    }
-    
-    func words() -> [String] {
-        return self.components(separatedBy: " ")
-    }
-    
-    func character(at index: Int) -> Character {
-        let stringIndex = self.index(self.startIndex, offsetBy: index)
-        return self[stringIndex]
-    }
-    
-    func removing(prefix: String) -> String {
-        
-        if self.hasPrefix(prefix) {
-            let substring = self.suffix(from: self.index(self.startIndex, offsetBy: prefix.count))
-            return String(substring)
-        } else {
-            return self
-        }
-    }
-    
-    func trimmingTrailingWhitespace() -> String {
-        
-        var string = self
-        while string.last == " " {
-            string = String(string.dropLast())
-        }
-        
-        return string
-    }
-}
-
 public extension Array {
     
     mutating func popFirst() -> Element? {
@@ -89,7 +53,7 @@ class CommentWrapper {
         return wrappedWithPrefix
     }
     
-    func commentPrefix(fromString string: String) -> String {
+    private func commentPrefix(fromString string: String) -> String {
         
         var prefix = String()
         
@@ -104,7 +68,7 @@ class CommentWrapper {
         return prefix
     }
     
-    func itemize(string: String) -> [StringItem] {
+    private func itemize(string: String) -> [StringItem] {
      
         var items = [StringItem]()
         var currentWord = String()
@@ -133,7 +97,7 @@ class CommentWrapper {
         return items
     }
     
-    func wrap(items: [StringItem], lineLength: Int) -> String {
+    private func wrap(items: [StringItem], lineLength: Int) -> String {
         
         var lines = [String]()
         var currentLine = String()
@@ -149,7 +113,7 @@ class CommentWrapper {
         var reversed = Array(items.reversed())
         while let next = reversed.popLast() {
             
-            next.debug_print()
+            //next.debug_print()
             
             switch next {
             case .word(let word):
