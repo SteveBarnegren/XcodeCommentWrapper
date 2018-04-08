@@ -40,15 +40,11 @@ import XCTest
 
 class CommentWrapperTests: XCTestCase {
     
-    private func alphabeticalAnimals() -> String {
-        return "ant bear cat dog emu fox gecko heron iguana jellyfish koala lion monkey newt octopus parrot quail rabbit sheep tiger uakari vole walrus xenopus yak zebra"
-    }
-    
     // MARK: - Wrapping
     
     func testWrapsLines() {
         
-        let input = alphabeticalAnimals()
+        let input = TestStrings.alphabeticalAnimals
         
         //////////////////////////////////////// <-- Guide (40 chars)
         let expected = """
@@ -66,7 +62,7 @@ class CommentWrapperTests: XCTestCase {
     
     func testWrapsLinesWithMultipleSpaces() {
         
-        let input = alphabeticalAnimals().replacingOccurrences(of: " ", with: "  ")
+        let input = TestStrings.alphabeticalAnimals.replacingOccurrences(of: " ", with: "  ")
         
         //////////////////////////////////////// <-- Guide (40 chars)
         let expected = """
@@ -87,7 +83,7 @@ class CommentWrapperTests: XCTestCase {
     
     func testInsertsPrefixWithDoubleForwardSlashAndSpace() {
         
-        let input = "// ".appending(alphabeticalAnimals())
+        let input = "// ".appending(TestStrings.alphabeticalAnimals)
         
         ////////////////////////////////////////*** <-- Guide (40 chars + 3 prefix)
         let expected = """
@@ -105,7 +101,7 @@ class CommentWrapperTests: XCTestCase {
     
     func testInsertsPrefixWithTripleForwardSlash() {
         
-        let input = "///".appending(alphabeticalAnimals())
+        let input = "///".appending(TestStrings.alphabeticalAnimals)
         
         ////////////////////////////////////////*** <-- Guide (40 chars + 3 prefix)
         let expected = """
@@ -125,7 +121,7 @@ class CommentWrapperTests: XCTestCase {
     
     func testHandlesNewLines() {
     
-        let input = "// " + alphabeticalAnimals() + "\n\n" + "// " + alphabeticalAnimals()
+        let input = "// " + TestStrings.alphabeticalAnimals + "\n\n" + "// " + TestStrings.alphabeticalAnimals
         
         ////////////////////////////////////////*** <-- Guide (40 chars + 3 prefix)
         let expected = """

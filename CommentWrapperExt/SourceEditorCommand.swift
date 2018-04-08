@@ -17,9 +17,11 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         if invocation.commandIdentifier == "wrap" {
             let commentWrapper = CommentWrapper()
             invocation.buffer.completeBuffer = commentWrapper.wrap(string: invocation.buffer.completeBuffer, lineLength: 40)
+        } else if invocation.commandIdentifier == "unwrap" {
+            let commentUnwrapper = CommentUnwrapper()
+            invocation.buffer.completeBuffer = commentUnwrapper.unwrap(string: invocation.buffer.completeBuffer)
         }
         
         completionHandler(nil)
     }
-    
 }
