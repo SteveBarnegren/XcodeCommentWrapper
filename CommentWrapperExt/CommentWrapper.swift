@@ -12,6 +12,14 @@ enum StringItem {
     case word(String)
     case space
     case newline
+    
+    func debug_print() {
+        switch self {
+        case .word(let word): print("word: \(word)")
+        case .space: print("space")
+        case .newline: print("newline")
+        }
+    }
 }
 
 extension String {
@@ -27,6 +35,26 @@ extension String {
     func character(at index: Int) -> Character {
         let stringIndex = self.index(self.startIndex, offsetBy: index)
         return self[stringIndex]
+    }
+    
+    func removing(prefix: String) -> String {
+        
+        if self.hasPrefix(prefix) {
+            let substring = self.suffix(from: self.index(self.startIndex, offsetBy: prefix.count))
+            return String(substring)
+        } else {
+            return self
+        }
+    }
+    
+    func trimmingTrailingWhitespace() -> String {
+        
+        var string = self
+        while string.last == " " {
+            string = String(string.dropLast())
+        }
+        
+        return string
     }
 }
 
@@ -47,15 +75,15 @@ class CommentWrapper {
     func wrap(string: String, lineLength: Int) -> String {
         
         let prefix = commentPrefix(fromString: string)
-        let unprefixedString = String(
-            string.suffix(from: string.index(string.startIndex, offsetBy: prefix.count))
-        )
+        let unprefixedString = string.lines().map { $0.removing(prefix: prefix) }.joined(separator: "\n")
+        
         let items = itemize(string: unprefixedString)
         let wrappedString = wrap(items: items, lineLength: lineLength)
     
         let wrappedWithPrefix = wrappedString
             .lines()
             .map { prefix.appending($0) }
+            .map { $0.trimmingTrailingWhitespace() }
             .joined(separator: "\n")
     
         return wrappedWithPrefix
@@ -121,6 +149,8 @@ class CommentWrapper {
         var reversed = Array(items.reversed())
         while let next = reversed.popLast() {
             
+            next.debug_print()
+            
             switch next {
             case .word(let word):
                 if currentLine.count + whiteSpace.count + word.count > lineLength {
@@ -133,7 +163,11 @@ class CommentWrapper {
             case .space:
                 whiteSpace.append(" ")
             case .newline:
-                appendCurrentLine()
+                if currentLine.isEmpty {
+                    lines.append("")
+                } else {
+                    appendCurrentLine()
+                }
             }
         }
         
@@ -141,4 +175,5 @@ class CommentWrapper {
         
         return lines.joined(separator: "\n")
     }
+    
 }

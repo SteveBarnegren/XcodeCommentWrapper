@@ -44,6 +44,8 @@ class CommentWrapperTests: XCTestCase {
         return "ant bear cat dog emu fox gecko heron iguana jellyfish koala lion monkey newt octopus parrot quail rabbit sheep tiger uakari vole walrus xenopus yak zebra"
     }
     
+    // MARK: - Wrapping
+    
     func testWrapsLines() {
         
         let input = alphabeticalAnimals()
@@ -81,6 +83,8 @@ class CommentWrapperTests: XCTestCase {
         XCTAssertEqual(output, expected)
     }
     
+    // MARK: - Comment prefixes
+    
     func testInsertsPrefixWithDoubleForwardSlashAndSpace() {
         
         let input = "// ".appending(alphabeticalAnimals())
@@ -109,6 +113,31 @@ class CommentWrapperTests: XCTestCase {
         ///iguana jellyfish koala lion monkey newt
         ///octopus parrot quail rabbit sheep tiger
         ///uakari vole walrus xenopus yak zebra
+        """
+        
+        let commentWrapper = CommentWrapper()
+        let output = commentWrapper.wrap(string: input, lineLength: 40)
+        
+        XCTAssertEqual(output, expected)
+    }
+    
+    // MARK: - Newlines
+    
+    func testHandlesNewLines() {
+    
+        let input = "// " + alphabeticalAnimals() + "\n\n" + "// " + alphabeticalAnimals()
+        
+        ////////////////////////////////////////*** <-- Guide (40 chars + 3 prefix)
+        let expected = """
+        // ant bear cat dog emu fox gecko heron
+        // iguana jellyfish koala lion monkey newt
+        // octopus parrot quail rabbit sheep tiger
+        // uakari vole walrus xenopus yak zebra
+        //
+        // ant bear cat dog emu fox gecko heron
+        // iguana jellyfish koala lion monkey newt
+        // octopus parrot quail rabbit sheep tiger
+        // uakari vole walrus xenopus yak zebra
         """
         
         let commentWrapper = CommentWrapper()
