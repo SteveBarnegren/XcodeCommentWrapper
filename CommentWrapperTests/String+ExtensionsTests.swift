@@ -76,4 +76,14 @@ class String_ExtensionsTests: XCTestCase {
         let string = "hello\t\t\t"
         XCTAssertEqual(string.trimmingTrailingWhitespace(), "hello")
     }
+    
+    // MARK: - Comment prefix
+    
+    func testCommentPrefix() {
+        
+        XCTAssertEqual("abc".commentPrefix(), "")
+        XCTAssertEqual("   abc".commentPrefix(), "   ")
+        XCTAssertEqual("//abc".commentPrefix(), "//")
+        XCTAssertEqual("// abc".commentPrefix(), "// ")
+    }
 }

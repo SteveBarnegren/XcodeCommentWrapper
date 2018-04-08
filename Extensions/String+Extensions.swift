@@ -43,4 +43,19 @@ extension String {
         
         return string
     }
+    
+    func commentPrefix() -> String {
+        
+        var prefix = String()
+        
+        for character in self {
+            if character == " " || character == "/" {
+                prefix.append(character)
+            } else {
+                return prefix
+            }
+        }
+        
+        return prefix
+    }
 }

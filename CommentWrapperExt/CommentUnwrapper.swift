@@ -12,8 +12,13 @@ class CommentUnwrapper {
     
     func unwrap(string: String) -> String {
         
-        let items = Itemizer.itemize(string: string)
-        return unwrappedString(fromItems: items)
+        let prefix = string.commentPrefix()
+        let unprefixedString = string.lines()
+            .map { $0.removing(prefix: prefix) }
+            .joined(separator: "\n")
+                
+        let items = Itemizer.itemize(string: unprefixedString)
+        return prefix + unwrappedString(fromItems: items)
     }
     
     private func unwrappedString(fromItems items: [StringItem]) -> String {

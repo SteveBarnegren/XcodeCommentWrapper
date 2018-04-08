@@ -24,7 +24,7 @@ class CommentWrapper {
 
     func wrap(string: String, lineLength: Int) -> String {
         
-        let prefix = commentPrefix(fromString: string)
+        let prefix = string.commentPrefix()
         let unprefixedString = string.lines().map { $0.removing(prefix: prefix) }.joined(separator: "\n")
         
         let items = Itemizer.itemize(string: unprefixedString)
@@ -37,21 +37,6 @@ class CommentWrapper {
             .joined(separator: "\n")
     
         return wrappedWithPrefix
-    }
-    
-    private func commentPrefix(fromString string: String) -> String {
-        
-        var prefix = String()
-        
-        for character in string {
-            if character == " " || character == "/" {
-                prefix.append(character)
-            } else {
-                return prefix
-            }
-        }
-        
-        return prefix
     }
     
     private func wrap(items: [StringItem], lineLength: Int) -> String {
