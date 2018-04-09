@@ -20,6 +20,12 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         } else if invocation.commandIdentifier == "unwrap" {
             let commentUnwrapper = CommentUnwrapper()
             invocation.buffer.completeBuffer = commentUnwrapper.unwrap(string: invocation.buffer.completeBuffer)
+        } else if invocation.commandIdentifier == "re-wrap" {
+            
+            var text = invocation.buffer.completeBuffer
+            text = CommentUnwrapper().unwrap(string: text)
+            text = CommentWrapper().wrap(string: text, lineLength: 40)
+            invocation.buffer.completeBuffer = text
         }
         
         completionHandler(nil)

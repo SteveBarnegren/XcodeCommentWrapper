@@ -32,14 +32,6 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>unwrap</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>Unwrap</string>
-				</dict>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
 					<string>wrap</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>Wrap</string>
@@ -48,9 +40,17 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).SourceEditorCommand</string>
+					<string>unwrap</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>Source Editor Command</string>
+					<string>Unwrap</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>re-wrap</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Re-wrap</string>
 				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
