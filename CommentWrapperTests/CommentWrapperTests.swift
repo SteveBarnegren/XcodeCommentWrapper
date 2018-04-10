@@ -54,8 +54,7 @@ class CommentWrapperTests: XCTestCase {
         uakari vole walrus xenopus yak zebra
         """
         
-        let commentWrapper = CommentWrapper()
-        let output = commentWrapper.wrap(string: input, lineLength: 40)
+        let output = CommentWrapper.wrap(string: input, lineLength: 40)
         
         XCTAssertEqual(output, expected)
     }
@@ -73,8 +72,7 @@ class CommentWrapperTests: XCTestCase {
         walrus  xenopus  yak  zebra
         """
         
-        let commentWrapper = CommentWrapper()
-        let output = commentWrapper.wrap(string: input, lineLength: 40)
+        let output = CommentWrapper.wrap(string: input, lineLength: 40)
         
         XCTAssertEqual(output, expected)
     }
@@ -93,8 +91,7 @@ class CommentWrapperTests: XCTestCase {
         // uakari vole walrus xenopus yak zebra
         """
         
-        let commentWrapper = CommentWrapper()
-        let output = commentWrapper.wrap(string: input, lineLength: 40)
+        let output = CommentWrapper.wrap(string: input, lineLength: 40)
         
         XCTAssertEqual(output, expected)
     }
@@ -111,8 +108,7 @@ class CommentWrapperTests: XCTestCase {
         ///uakari vole walrus xenopus yak zebra
         """
         
-        let commentWrapper = CommentWrapper()
-        let output = commentWrapper.wrap(string: input, lineLength: 40)
+        let output = CommentWrapper.wrap(string: input, lineLength: 40)
         
         XCTAssertEqual(output, expected)
     }
@@ -136,8 +132,7 @@ class CommentWrapperTests: XCTestCase {
         // uakari vole walrus xenopus yak zebra
         """
         
-        let commentWrapper = CommentWrapper()
-        let output = commentWrapper.wrap(string: input, lineLength: 40)
+        let output = CommentWrapper.wrap(string: input, lineLength: 40)
         
         XCTAssertEqual(output, expected)
     }

@@ -9,23 +9,43 @@
 import Foundation
 import XcodeKit
 
+enum Action: String {
+    case wrap = "wrap"
+    case unwrap = "unwrap"
+    case rewrap = "re-wrap"
+}
+
 class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
         // Implement your command here, invoking the completion handler when done. Pass it nil on success, and an NSError on failure.
         
-        if invocation.commandIdentifier == "wrap" {
-            let commentWrapper = CommentWrapper()
-            invocation.buffer.completeBuffer = commentWrapper.wrap(string: invocation.buffer.completeBuffer, lineLength: 40)
-        } else if invocation.commandIdentifier == "unwrap" {
-            let commentUnwrapper = CommentUnwrapper()
-            invocation.buffer.completeBuffer = commentUnwrapper.unwrap(string: invocation.buffer.completeBuffer)
-        } else if invocation.commandIdentifier == "re-wrap" {
+        guard let action = Action(rawValue: invocation.commandIdentifier) else {
+            print("Unknown action")
+            completionHandler(nil)
+            return
+        }
+        
+        for selection in invocation.buffer.selections as! [XCSourceTextRange] {
             
-            var text = invocation.buffer.completeBuffer
-            text = CommentUnwrapper().unwrap(string: text)
-            text = CommentWrapper().wrap(string: text, lineLength: 40)
-            invocation.buffer.completeBuffer = text
+            let startLine = selection.start.line
+            let endLine = selection.end.line
+            let selectedLines: [String] = invocation.buffer.lines as! [String]
+            var selectedText = selectedLines[startLine...endLine].joined()
+            
+            switch action {
+            case .wrap:
+                selectedText = CommentWrapper.wrap(string: selectedText, lineLength: 40)
+            case .unwrap:
+                selectedText = CommentUnwrapper.unwrap(string: selectedText)
+            case .rewrap:
+                let unwrapped = CommentUnwrapper.unwrap(string: selectedText)
+                let rewrapped = CommentWrapper.wrap(string: unwrapped, lineLength: 40)
+                selectedText = rewrapped
+            }
+            
+            let range = NSRange(location: startLine, length: (endLine - startLine)+1)
+            invocation.buffer.lines.replaceObjects(in: range, withObjectsFrom: selectedText.lines())
         }
         
         completionHandler(nil)

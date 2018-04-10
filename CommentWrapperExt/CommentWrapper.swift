@@ -22,7 +22,7 @@ public extension Array {
 
 class CommentWrapper {
 
-    func wrap(string: String, lineLength: Int) -> String {
+    static func wrap(string: String, lineLength: Int) -> String {
         
         let prefix = string.commentPrefix()
         let unprefixedString = string.lines().map { $0.removing(prefix: prefix) }.joined(separator: "\n")
@@ -39,7 +39,7 @@ class CommentWrapper {
         return wrappedWithPrefix
     }
     
-    private func wrap(items: [StringItem], lineLength: Int) -> String {
+    private static func wrap(items: [StringItem], lineLength: Int) -> String {
         
         var lines = [String]()
         var currentLine = String()

@@ -10,7 +10,7 @@ import Foundation
 
 class CommentUnwrapper {
     
-    func unwrap(string: String) -> String {
+    static func unwrap(string: String) -> String {
         
         let prefix = string.commentPrefix()
         let unprefixedString = string.lines()
@@ -31,7 +31,7 @@ class CommentUnwrapper {
             .joined(separator: "\n")
     }
     
-    private func unwrappedString(fromItems items: [StringItem]) -> String {
+    private static func unwrappedString(fromItems items: [StringItem]) -> String {
         
         var unwrappedString = String()
         

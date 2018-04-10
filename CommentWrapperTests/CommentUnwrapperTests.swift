@@ -23,9 +23,7 @@ class CommentUnwrapperTests: XCTestCase {
         """
         
         let expected = TestStrings.alphabeticalAnimals
-        
-        let commentUnwrapper = CommentUnwrapper()
-        let output = commentUnwrapper.unwrap(string: input)
+        let output = CommentUnwrapper.unwrap(string: input)
         
         XCTAssertEqual(output, expected)
     }
@@ -50,8 +48,7 @@ class CommentUnwrapperTests: XCTestCase {
             .replacingOccurrences(of: "quail  ", with: "quail ")
             .replacingOccurrences(of: "vole  ", with: "vole ")
 
-        let commentUnwrapper = CommentUnwrapper()
-        let output = commentUnwrapper.unwrap(string: input)
+        let output = CommentUnwrapper.unwrap(string: input)
         
         XCTAssertEqual(output, expected)
     }
@@ -69,9 +66,7 @@ class CommentUnwrapperTests: XCTestCase {
         """
         
         let expected = "// ".appending(TestStrings.alphabeticalAnimals)
-        
-        let commentUnwrapper = CommentUnwrapper()
-        let output = commentUnwrapper.unwrap(string: input)
+        let output = CommentUnwrapper.unwrap(string: input)
         
         XCTAssertEqual(output, expected)
     }
@@ -94,10 +89,7 @@ class CommentUnwrapperTests: XCTestCase {
         """
         
         let expected = "// " + TestStrings.alphabeticalAnimals + "\n\n" + "// " + TestStrings.alphabeticalAnimals
-        
-        
-        let commentUnwrapper = CommentUnwrapper()
-        let output = commentUnwrapper.unwrap(string: input)
+        let output = CommentUnwrapper.unwrap(string: input)
         
         XCTAssertEqual(output, expected)
     }
