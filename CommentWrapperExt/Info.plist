@@ -27,32 +27,7 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>XCSourceEditorCommandDefinitions</key>
-			<array>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
-					<string>wrap</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>Wrap</string>
-				</dict>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
-					<string>unwrap</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>Unwrap</string>
-				</dict>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
-					<string>re-wrap</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>Re-wrap</string>
-				</dict>
-			</array>
+			<array/>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
 			<string>$(PRODUCT_MODULE_NAME).SourceEditorExtension</string>
 		</dict>
