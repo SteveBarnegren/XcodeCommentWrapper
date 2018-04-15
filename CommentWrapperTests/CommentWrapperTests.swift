@@ -77,6 +77,24 @@ class CommentWrapperTests: XCTestCase {
         XCTAssertEqual(output, expected)
     }
     
+    func testHandlesEmptyPrefixedLines() {
+        
+        let input = """
+        /// First line
+        ///
+        /// Second line
+        """
+        
+        let expected = """
+        /// First line
+        ///
+        /// Second line
+        """
+        
+        let output = CommentWrapper.wrap(string: input, lineLength: 40)
+        XCTAssertEqual(output, expected)
+    }
+    
     // MARK: - Comment prefixes
     
     func testInsertsPrefixWithDoubleForwardSlashAndSpace() {
@@ -113,9 +131,9 @@ class CommentWrapperTests: XCTestCase {
         XCTAssertEqual(output, expected)
     }
     
-    // MARK: - Newlines
+    // MARK: - Paragraphs
     
-    func testHandlesNewLines() {
+    func testHandlesParagraphs() {
     
         let input = "// " + TestStrings.alphabeticalAnimals + "\n\n" + "// " + TestStrings.alphabeticalAnimals
         

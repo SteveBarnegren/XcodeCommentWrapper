@@ -25,7 +25,10 @@ class CommentWrapper {
     static func wrap(string: String, lineLength: Int) -> String {
         
         let prefix = string.commentPrefix()
-        let unprefixedString = string.lines().map { $0.removing(prefix: prefix) }.joined(separator: "\n")
+        let unprefixedString = string.lines()
+            .map { $0.removing(prefix: prefix) }
+            .map { $0.removing(prefix: prefix.trimmingTrailingWhitespace()) }
+            .joined(separator: "\n")
         
         let items = Itemizer.itemize(string: unprefixedString)
         let wrappedString = wrap(items: items, lineLength: lineLength)
