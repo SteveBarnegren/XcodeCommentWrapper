@@ -93,4 +93,34 @@ class CommentUnwrapperTests: XCTestCase {
         
         XCTAssertEqual(output, expected)
     }
+    
+    // MARK: - Code
+    
+    func testHandlesCode() {
+        
+        ////////////////////////////////////////*** <-- Guide (40 chars + 3 prefix)
+        let input = """
+        // ant bear cat dog emu fox gecko heron
+        // iguana jellyfish koala lion monkey newt
+        // octopus parrot quail rabbit sheep tiger
+        // uakari vole walrus xenopus yak zebra
+        //
+        //     this.is.some.code.that.runs.longer.than.40.chars()
+        //
+        // ant bear cat dog emu fox gecko heron
+        // iguana jellyfish koala lion monkey newt
+        // octopus parrot quail rabbit sheep tiger
+        // uakari vole walrus xenopus yak zebra
+        """
+        
+        let expected =
+            "// " + TestStrings.alphabeticalAnimals + "\n" +
+                "\n" +
+                "//     this.is.some.code.that.runs.longer.than.40.chars()" + "\n" +
+                "\n" +
+                "// " + TestStrings.alphabeticalAnimals
+        
+        let output = CommentUnwrapper.unwrap(string: input)
+        XCTAssertEqual(output, expected)
+    }
 }

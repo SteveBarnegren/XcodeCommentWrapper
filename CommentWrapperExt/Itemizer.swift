@@ -12,12 +12,32 @@ enum StringItem {
     case word(String)
     case space
     case newline
+    case code(String)
     
     func debug_print() {
         switch self {
         case .word(let word): print("word: \(word)")
         case .space: print("space")
         case .newline: print("newline")
+        case .code(let code): print("code: \(code)")
+        }
+    }
+}
+
+extension StringItem: Equatable {
+    static func == (lhs: StringItem, rhs: StringItem) -> Bool {
+        
+        switch (lhs, rhs) {
+        case (.word(let lWord), .word(let rWord)):
+            return lWord == rWord
+        case (.space, .space):
+            return true
+        case (.newline, .newline):
+            return true
+        case (.code(let lCode), .code(let rCode)):
+            return lCode == rCode
+        default:
+            return false
         }
     }
 }
@@ -25,9 +45,34 @@ enum StringItem {
 class Itemizer {
     
     static func itemize(string: String) -> [StringItem] {
+
+        var items = [StringItem]()
+        func appendNewline() {
+            if items.isEmpty == false {
+                items.append(.newline)
+            }
+        }
+        
+        for line in string.lines() {
+            
+            if line.hasPrefix("    ") {
+                appendNewline()
+                items.append(.code(line))
+            } else {
+                appendNewline()
+                items.append(contentsOf: itemize(line: line))
+            }
+        }
+        
+        return items
+    }
+    
+    static func itemize(line: String) -> [StringItem] {
         
         var items = [StringItem]()
         var currentWord = String()
+        
+        var currentWhitespace = [StringItem]()
         
         func storeCurrentWord() {
             if !currentWord.isEmpty {
@@ -36,7 +81,7 @@ class Itemizer {
             }
         }
         
-        for character in string {
+        for character in line {
             if character == " " {
                 storeCurrentWord()
                 items.append(.space)

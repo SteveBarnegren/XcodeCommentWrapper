@@ -77,6 +77,8 @@ class CommentWrapper {
                 } else {
                     appendCurrentLine()
                 }
+            case .code(let code):
+                currentLine.append(contentsOf: code)
             }
         }
         

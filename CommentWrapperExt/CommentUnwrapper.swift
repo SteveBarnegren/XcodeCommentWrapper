@@ -68,6 +68,8 @@ class CommentUnwrapper {
                 } else {
                     spacePending = true
                 }
+            case .code(let code):
+                unwrappedString.append(contentsOf: code)
             }
             
             lastItem = next
