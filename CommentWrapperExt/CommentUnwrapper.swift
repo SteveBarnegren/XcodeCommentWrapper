@@ -65,6 +65,8 @@ class CommentUnwrapper {
                     }
                     
                     unwrappedString += "\n"
+                } else if let lastItem = lastItem, case .code = lastItem {
+                    unwrappedString += "\n"
                 } else {
                     spacePending = true
                 }
