@@ -71,8 +71,9 @@ class CommentUnwrapper {
                     spacePending = true
                 }
             case .bullet:
-                if unwrappedString.isEmpty == false {
+                if spacePending {
                     unwrappedString += "\n"
+                    spacePending = false
                 }
                 unwrappedString += "-"
                 spacePending = false

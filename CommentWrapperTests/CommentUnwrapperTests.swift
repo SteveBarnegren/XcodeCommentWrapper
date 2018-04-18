@@ -168,4 +168,29 @@ class CommentUnwrapperTests: XCTestCase {
         let output = CommentUnwrapper.unwrap(string: input)
         XCTAssertEqual(output, input)
     }
+    
+    func testHandlesBulletsAfterRegularComments() {
+        
+        ////////////////////////////////////////*** <-- Guide (40 chars + 3 prefix)
+        let input = """
+        // This is a comment
+        //
+        // - First item
+        // - Second item
+        // - Third item
+        """
+        
+        let expected = """
+        // This is a comment
+
+        // - First item
+        // - Second item
+        // - Third item
+        """
+        
+        let output = CommentUnwrapper.unwrap(string: input)
+        XCTAssertEqual(output, expected)
+    }
+    
+    
 }
