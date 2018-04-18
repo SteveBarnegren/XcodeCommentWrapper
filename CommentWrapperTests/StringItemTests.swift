@@ -15,6 +15,7 @@ class StringItemTests: XCTestCase {
         let uniqueInstances: [StringItem] = [
             .space,
             .newline,
+            .bullet,
             .word("aaa"),
             .word("bbb"),
             .code("aaa"),
@@ -31,6 +32,21 @@ class StringItemTests: XCTestCase {
                 }
             }
         }
+    }
+    
+    func testIsWhitespace() {
+        
+        XCTAssertTrue(StringItem.space.isWhitespace)
+        XCTAssertTrue(StringItem.newline.isWhitespace)
+        XCTAssertFalse(StringItem.bullet.isWhitespace)
+        XCTAssertFalse(StringItem.word("aaa").isWhitespace)
+        XCTAssertFalse(StringItem.code("aaa").isWhitespace)
+    }
+    
+    func testStringItemsArrayContainsOnlyWhiteSpace() {
+        
+        XCTAssertTrue([StringItem.space, StringItem.newline].containsOnlyWhiteSpace)
+        XCTAssertFalse([StringItem.space, StringItem.bullet].containsOnlyWhiteSpace)
     }
 
 }

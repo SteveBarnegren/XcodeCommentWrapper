@@ -77,7 +77,11 @@ class CommentWrapper {
                 } else {
                     appendCurrentLine()
                 }
+            case .bullet:
+                whiteSpace = ""
+                currentLine.append("-")
             case .code(let code):
+                whiteSpace = ""
                 currentLine.append(contentsOf: code)
             }
         }

@@ -12,13 +12,25 @@ enum StringItem {
     case word(String)
     case space
     case newline
+    case bullet
     case code(String)
+    
+    var isWhitespace: Bool {
+        switch self {
+        case .word: return false
+        case .space: return true
+        case .newline: return true
+        case .bullet: return false
+        case .code: return false
+        }
+    }
     
     func debug_print() {
         switch self {
         case .word(let word): print("word: \(word)")
         case .space: print("space")
         case .newline: print("newline")
+        case .bullet: print("bullet")
         case .code(let code): print("code: \(code)")
         }
     }
@@ -34,11 +46,20 @@ extension StringItem: Equatable {
             return true
         case (.newline, .newline):
             return true
+        case (.bullet, .bullet):
+            return true
         case (.code(let lCode), .code(let rCode)):
             return lCode == rCode
         default:
             return false
         }
+    }
+}
+
+extension Array where Element == StringItem {
+    
+    var containsOnlyWhiteSpace: Bool {
+        return self.contains { $0.isWhitespace == false } == false
     }
 }
 
@@ -88,6 +109,8 @@ class Itemizer {
             } else if character == "\n" {
                 storeCurrentWord()
                 items.append(.newline)
+            } else if character == "-" && currentWord.isEmpty && items.containsOnlyWhiteSpace {
+                items.append(.bullet)
             } else {
                 currentWord.append(character)
             }

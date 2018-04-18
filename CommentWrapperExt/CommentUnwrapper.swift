@@ -70,6 +70,12 @@ class CommentUnwrapper {
                 } else {
                     spacePending = true
                 }
+            case .bullet:
+                if unwrappedString.isEmpty == false {
+                    unwrappedString += "\n"
+                }
+                unwrappedString += "-"
+                spacePending = false
             case .code(let code):
                 unwrappedString.append(contentsOf: code)
             }

@@ -183,4 +183,28 @@ class CommentWrapperTests: XCTestCase {
         let output = CommentWrapper.wrap(string: input, lineLength: 40)
         XCTAssertEqual(output, expected)
     }
+    
+    // MARK: - Bulleted lists
+    
+    func testHandlesBulletedLists() {
+        
+        let input =
+            "// - " + TestStrings.alphabeticalAnimals + "\n" +
+            "// - " + TestStrings.alphabeticalAnimals
+        
+        
+        let expected = """
+        // - ant bear cat dog emu fox gecko heron
+        // iguana jellyfish koala lion monkey newt
+        // octopus parrot quail rabbit sheep tiger
+        // uakari vole walrus xenopus yak zebra
+        // - ant bear cat dog emu fox gecko heron
+        // iguana jellyfish koala lion monkey newt
+        // octopus parrot quail rabbit sheep tiger
+        // uakari vole walrus xenopus yak zebra
+        """
+        
+        let output = CommentWrapper.wrap(string: input, lineLength: 40)
+        XCTAssertEqual(output, expected)
+    }
 }
