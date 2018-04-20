@@ -17,7 +17,7 @@
 		67A3C094207822DD00E93876 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A3C093207822DD00E93876 /* Cocoa.framework */; };
 		67A3C097207822DD00E93876 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C096207822DD00E93876 /* SourceEditorExtension.swift */; };
 		67A3C099207822DD00E93876 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C098207822DD00E93876 /* SourceEditorCommand.swift */; };
-		67A3C09E207822DD00E93876 /* CommentWrapperExt.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 67A3C091207822DD00E93876 /* CommentWrapperExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		67A3C09E207822DD00E93876 /* Comment Wrapper.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 67A3C091207822DD00E93876 /* Comment Wrapper.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		67A3C0A42078260E00E93876 /* CommentWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0A32078260E00E93876 /* CommentWrapper.swift */; };
 		67A3C0A5207829FB00E93876 /* CommentWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0A32078260E00E93876 /* CommentWrapper.swift */; };
 		67A3C0A8207A847900E93876 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0A7207A847900E93876 /* String+Extensions.swift */; };
@@ -61,7 +61,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				67A3C09E207822DD00E93876 /* CommentWrapperExt.appex in Embed App Extensions */,
+				67A3C09E207822DD00E93876 /* Comment Wrapper.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,7 +81,7 @@
 		67A3C07E207822B100E93876 /* CommentWrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommentWrapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A3C082207822B100E93876 /* CommentWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentWrapperTests.swift; sourceTree = "<group>"; };
 		67A3C084207822B100E93876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67A3C091207822DD00E93876 /* CommentWrapperExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CommentWrapperExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		67A3C091207822DD00E93876 /* Comment Wrapper.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Comment Wrapper.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A3C093207822DD00E93876 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		67A3C096207822DD00E93876 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		67A3C098207822DD00E93876 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 			children = (
 				67A3C06C207822B000E93876 /* CommentWrapper.app */,
 				67A3C07E207822B100E93876 /* CommentWrapperTests.xctest */,
-				67A3C091207822DD00E93876 /* CommentWrapperExt.appex */,
+				67A3C091207822DD00E93876 /* Comment Wrapper.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -245,9 +245,9 @@
 			productReference = 67A3C07E207822B100E93876 /* CommentWrapperTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		67A3C090207822DD00E93876 /* CommentWrapperExt */ = {
+		67A3C090207822DD00E93876 /* Comment Wrapper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 67A3C09F207822DD00E93876 /* Build configuration list for PBXNativeTarget "CommentWrapperExt" */;
+			buildConfigurationList = 67A3C09F207822DD00E93876 /* Build configuration list for PBXNativeTarget "Comment Wrapper" */;
 			buildPhases = (
 				67A3C08D207822DD00E93876 /* Sources */,
 				67A3C08E207822DD00E93876 /* Frameworks */,
@@ -257,9 +257,9 @@
 			);
 			dependencies = (
 			);
-			name = CommentWrapperExt;
+			name = "Comment Wrapper";
 			productName = CommentWrapperExt;
-			productReference = 67A3C091207822DD00E93876 /* CommentWrapperExt.appex */;
+			productReference = 67A3C091207822DD00E93876 /* Comment Wrapper.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
@@ -302,7 +302,7 @@
 			targets = (
 				67A3C06B207822B000E93876 /* CommentWrapper */,
 				67A3C07D207822B100E93876 /* CommentWrapperTests */,
-				67A3C090207822DD00E93876 /* CommentWrapperExt */,
+				67A3C090207822DD00E93876 /* Comment Wrapper */,
 			);
 		};
 /* End PBXProject section */
@@ -389,7 +389,7 @@
 		};
 		67A3C09D207822DD00E93876 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 67A3C090207822DD00E93876 /* CommentWrapperExt */;
+			target = 67A3C090207822DD00E93876 /* Comment Wrapper */;
 			targetProxy = 67A3C09C207822DD00E93876 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -652,7 +652,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		67A3C09F207822DD00E93876 /* Build configuration list for PBXNativeTarget "CommentWrapperExt" */ = {
+		67A3C09F207822DD00E93876 /* Build configuration list for PBXNativeTarget "Comment Wrapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67A3C0A0207822DD00E93876 /* Debug */,
