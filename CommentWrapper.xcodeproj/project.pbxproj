@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		672771C1208B486F00256933 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672771BF208B486F00256933 /* IntroductionViewController.swift */; };
+		672771C2208B486F00256933 /* IntroductionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 672771C0208B486F00256933 /* IntroductionViewController.xib */; };
+		672771C6208B4B8700256933 /* InstallationInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672771C4208B4B8700256933 /* InstallationInstructionsViewController.swift */; };
+		672771C7208B4B8700256933 /* InstallationInstructionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 672771C5208B4B8700256933 /* InstallationInstructionsViewController.xib */; };
+		672771CC208B4BFB00256933 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672771CA208B4BFB00256933 /* AboutViewController.swift */; };
+		672771CD208B4BFB00256933 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 672771CB208B4BFB00256933 /* AboutViewController.xib */; };
 		678F0EE020853DB300D94D9D /* ItemizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F0EDF20853DB300D94D9D /* ItemizerTests.swift */; };
 		678F0EE220853EE400D94D9D /* StringItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F0EE120853EE400D94D9D /* StringItemTests.swift */; };
 		67A3C070207822B000E93876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C06F207822B000E93876 /* AppDelegate.swift */; };
@@ -69,6 +75,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		672771BF208B486F00256933 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
+		672771C0208B486F00256933 /* IntroductionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroductionViewController.xib; sourceTree = "<group>"; };
+		672771C4208B4B8700256933 /* InstallationInstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationInstructionsViewController.swift; sourceTree = "<group>"; };
+		672771C5208B4B8700256933 /* InstallationInstructionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstallationInstructionsViewController.xib; sourceTree = "<group>"; };
+		672771CA208B4BFB00256933 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		672771CB208B4BFB00256933 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		678F0EDF20853DB300D94D9D /* ItemizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemizerTests.swift; sourceTree = "<group>"; };
 		678F0EE120853EE400D94D9D /* StringItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringItemTests.swift; sourceTree = "<group>"; };
 		67A3C06C207822B000E93876 /* CommentWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommentWrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +136,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		672771C3208B4B6C00256933 /* Introduction */ = {
+			isa = PBXGroup;
+			children = (
+				672771BF208B486F00256933 /* IntroductionViewController.swift */,
+				672771C0208B486F00256933 /* IntroductionViewController.xib */,
+			);
+			path = Introduction;
+			sourceTree = "<group>";
+		};
+		672771C8208B4B9D00256933 /* Installation Instructions */ = {
+			isa = PBXGroup;
+			children = (
+				672771C4208B4B8700256933 /* InstallationInstructionsViewController.swift */,
+				672771C5208B4B8700256933 /* InstallationInstructionsViewController.xib */,
+			);
+			path = "Installation Instructions";
+			sourceTree = "<group>";
+		};
+		672771C9208B4BE900256933 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				672771CA208B4BFB00256933 /* AboutViewController.swift */,
+				672771CB208B4BFB00256933 /* AboutViewController.xib */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		67A3C063207822B000E93876 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +190,9 @@
 			children = (
 				67A3C06F207822B000E93876 /* AppDelegate.swift */,
 				67A3C071207822B000E93876 /* ViewController.swift */,
+				672771C3208B4B6C00256933 /* Introduction */,
+				672771C8208B4B9D00256933 /* Installation Instructions */,
+				672771C9208B4BE900256933 /* About */,
 				67A3C073207822B000E93876 /* Assets.xcassets */,
 				67A3C075207822B000E93876 /* Main.storyboard */,
 				67A3C078207822B100E93876 /* Info.plist */,
@@ -313,7 +355,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				67A3C074207822B000E93876 /* Assets.xcassets in Resources */,
+				672771C7208B4B8700256933 /* InstallationInstructionsViewController.xib in Resources */,
 				67A3C077207822B000E93876 /* Main.storyboard in Resources */,
+				672771C2208B486F00256933 /* IntroductionViewController.xib in Resources */,
+				672771CD208B4BFB00256933 /* AboutViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +386,10 @@
 				67A3C072207822B000E93876 /* ViewController.swift in Sources */,
 				67A3C0B4207A896E00E93876 /* Character+Extensions.swift in Sources */,
 				67A3C0AE207A852D00E93876 /* String+Extensions.swift in Sources */,
+				672771C6208B4B8700256933 /* InstallationInstructionsViewController.swift in Sources */,
 				67A3C070207822B000E93876 /* AppDelegate.swift in Sources */,
+				672771C1208B486F00256933 /* IntroductionViewController.swift in Sources */,
+				672771CC208B4BFB00256933 /* AboutViewController.swift in Sources */,
 				67A3C0BC207A8B8900E93876 /* Itemizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

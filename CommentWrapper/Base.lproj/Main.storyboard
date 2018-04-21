@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +677,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="CommentWrapper" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -688,7 +692,7 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-			<connections>
+                        <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
                     </window>
@@ -703,15 +707,102 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="CommentWrapper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="739" height="577"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z7P-pC-i2X">
+                                <rect key="frame" x="305" y="428" width="129" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="z7P-pC-i2X" secondAttribute="height" multiplier="1:1" id="7xC-bE-pBM"/>
+                                    <constraint firstAttribute="height" constant="129" id="z60-cs-a4q"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Icon" id="sPT-Sm-hye"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KWp-l9-yTq">
+                                <rect key="frame" x="308" y="403" width="123" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Comment Wrapper" id="qZg-9S-v48">
+                                    <font key="font" metaFont="systemSemibold" size="13"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="100" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="niL-GN-hou">
+                                <rect key="frame" x="173" y="352" width="392" height="21"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Esj-U8-7yg">
+                                        <rect key="frame" x="-6" y="-7" width="79" height="32"/>
+                                        <buttonCell key="cell" type="push" title="What?" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WBc-ik-LT7">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="whatButtonPressedWithSender:" target="XfG-lQ-9wD" id="5rV-MW-Qqk"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QoW-XY-0YK">
+                                        <rect key="frame" x="161" y="-7" width="74" height="32"/>
+                                        <buttonCell key="cell" type="push" title="How?" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rVj-Go-Sg3">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="howButtonPressedWithSender:" target="XfG-lQ-9wD" id="kj0-fT-9K4"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wxn-vx-EYr">
+                                        <rect key="frame" x="323" y="-7" width="75" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Who?" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GfO-xT-py5">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="whoButtonPressedWithSender:" target="XfG-lQ-9wD" id="ehb-vc-nhI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="dbu-6u-I9e">
+                                <rect key="frame" x="20" y="20" width="699" height="312"/>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="z7P-pC-i2X" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="26z-VZ-INr"/>
+                            <constraint firstAttribute="trailing" secondItem="dbu-6u-I9e" secondAttribute="trailing" constant="20" id="7L2-zr-FMU"/>
+                            <constraint firstItem="z7P-pC-i2X" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="7LC-DU-sgm"/>
+                            <constraint firstItem="KWp-l9-yTq" firstAttribute="top" secondItem="z7P-pC-i2X" secondAttribute="bottom" constant="8" id="9zE-5k-yOS"/>
+                            <constraint firstItem="KWp-l9-yTq" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="AcD-KT-QQx"/>
+                            <constraint firstAttribute="bottom" secondItem="dbu-6u-I9e" secondAttribute="bottom" constant="20" id="Gkv-hZ-bEu"/>
+                            <constraint firstItem="niL-GN-hou" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Lig-MY-81G"/>
+                            <constraint firstItem="dbu-6u-I9e" firstAttribute="top" secondItem="niL-GN-hou" secondAttribute="bottom" constant="20" id="n1R-yB-lBS"/>
+                            <constraint firstItem="niL-GN-hou" firstAttribute="top" secondItem="KWp-l9-yTq" secondAttribute="bottom" constant="30" id="vhT-es-hRT"/>
+                            <constraint firstItem="dbu-6u-I9e" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="z6z-zD-Kwm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentContainerView" destination="dbu-6u-I9e" id="sVk-iO-WjP"/>
+                        <outlet property="howButton" destination="QoW-XY-0YK" id="Tf2-bK-QLw"/>
+                        <outlet property="whatButton" destination="Esj-U8-7yg" id="7lG-ok-70G"/>
+                        <outlet property="whoButton" destination="Wxn-vx-EYr" id="R8l-eM-Sab"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="128.5" y="808.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Icon" width="1024" height="1024"/>
+    </resources>
 </document>
