@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SBAutoLayout
 
 class ViewController: NSViewController {
     
@@ -85,7 +86,7 @@ class ViewController: NSViewController {
         contentViewController = nil
         
         contentContainerView.addSubview(viewController.view)
-        viewController.view.frame = contentContainerView.bounds
+        viewController.view.pinToSuperviewEdges()
         addChildViewController(viewController)
         contentViewController = viewController
     }
