@@ -215,13 +215,13 @@
 			children = (
 				67A3C06F207822B000E93876 /* AppDelegate.swift */,
 				67A3C071207822B000E93876 /* ViewController.swift */,
+				67A3C075207822B000E93876 /* Main.storyboard */,
 				6720E7EA208B8C7B00D07850 /* Content */,
 				6720E7E6208B8B9600D07850 /* AttributedTextViewController.swift */,
 				6720E7E7208B8B9600D07850 /* AttributedTextViewController.xib */,
 				672771C8208B4B9D00256933 /* Installation Instructions */,
 				672771C9208B4BE900256933 /* About */,
 				67A3C073207822B000E93876 /* Assets.xcassets */,
-				67A3C075207822B000E93876 /* Main.storyboard */,
 				67A3C078207822B100E93876 /* Info.plist */,
 				67A3C079207822B100E93876 /* CommentWrapper.entitlements */,
 			);

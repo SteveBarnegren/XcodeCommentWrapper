@@ -25,9 +25,7 @@ class ViewController: NSViewController {
     
     // MARK: - Views
     
-    @IBOutlet private var whatButton: NSButton!
-    @IBOutlet private var howButton: NSButton!
-    @IBOutlet private var whoButton: NSButton!
+    @IBOutlet private var segmentedControl: NSSegmentedControl!
     @IBOutlet private var contentContainerView: NSView!
     
     private var contentViewController: NSViewController?
@@ -42,16 +40,14 @@ class ViewController: NSViewController {
 
     // MARK: - Actions
     
-    @IBAction private func whatButtonPressed(sender: NSButton) {
-        showContent(type: .introduction)
-    }
-    
-    @IBAction private func howButtonPressed(sender: NSButton) {
-        showContent(type: .installationInstructions)
-    }
-    
-    @IBAction private func whoButtonPressed(sender: NSButton) {
-        showContent(type: .about)
+    @IBAction private func segmentedControlValueChanged(sender: NSSegmentedControl) {
+        
+        switch self.segmentedControl.selectedSegment {
+        case 0: showContent(type: .introduction)
+        case 1: showContent(type: .installationInstructions)
+        case 2: showContent(type: .about)
+        default: fatalError("Unhandled segmented control selection")
+        }
     }
     
     // MARK: - Switch Content
