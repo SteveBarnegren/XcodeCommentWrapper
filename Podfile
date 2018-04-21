@@ -8,6 +8,7 @@ end
 target 'CommentWrapper' do
   use_frameworks!
   pod 'SBAutoLayout'
+  pod 'AttributedStringBuilder'
 
   target 'CommentWrapperTests' do
     inherit! :search_paths
