@@ -9,10 +9,15 @@
 import Cocoa
 
 class InstallationInstructionsViewController: NSViewController {
+    
+    @IBOutlet fileprivate var textView: NSTextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        
+        textView.isEditable = false
+        textView.isSelectable = false
+        
     }
     
 }

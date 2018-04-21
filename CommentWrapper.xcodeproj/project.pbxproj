@@ -11,8 +11,10 @@
 		6720E7E2208B7E1200D07850 /* CommentWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0A32078260E00E93876 /* CommentWrapper.swift */; };
 		6720E7E3208B7E1700D07850 /* CommentUnwrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0B6207A89F700E93876 /* CommentUnwrapper.swift */; };
 		6720E7E5208B827C00D07850 /* ContentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720E7E4208B827C00D07850 /* ContentBuilder.swift */; };
-		672771C1208B486F00256933 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672771BF208B486F00256933 /* IntroductionViewController.swift */; };
-		672771C2208B486F00256933 /* IntroductionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 672771C0208B486F00256933 /* IntroductionViewController.xib */; };
+		6720E7E8208B8B9600D07850 /* AttributedTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720E7E6208B8B9600D07850 /* AttributedTextViewController.swift */; };
+		6720E7E9208B8B9600D07850 /* AttributedTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6720E7E7208B8B9600D07850 /* AttributedTextViewController.xib */; };
+		6720E7EC208B8C9000D07850 /* IntroductionContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720E7EB208B8C9000D07850 /* IntroductionContent.swift */; };
+		6720E7EE208B8D7400D07850 /* InstructionsContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720E7ED208B8D7400D07850 /* InstructionsContent.swift */; };
 		672771C6208B4B8700256933 /* InstallationInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672771C4208B4B8700256933 /* InstallationInstructionsViewController.swift */; };
 		672771C7208B4B8700256933 /* InstallationInstructionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 672771C5208B4B8700256933 /* InstallationInstructionsViewController.xib */; };
 		672771CC208B4BFB00256933 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672771CA208B4BFB00256933 /* AboutViewController.swift */; };
@@ -86,8 +88,10 @@
 		3902CE9BF190914279C5C9CA /* Pods-CommentWrapperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommentWrapperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CommentWrapperTests/Pods-CommentWrapperTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C790BC00E7E4EB185A99F09 /* Pods-CommentWrapperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommentWrapperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CommentWrapperTests/Pods-CommentWrapperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6720E7E4208B827C00D07850 /* ContentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBuilder.swift; sourceTree = "<group>"; };
-		672771BF208B486F00256933 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
-		672771C0208B486F00256933 /* IntroductionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroductionViewController.xib; sourceTree = "<group>"; };
+		6720E7E6208B8B9600D07850 /* AttributedTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedTextViewController.swift; sourceTree = "<group>"; };
+		6720E7E7208B8B9600D07850 /* AttributedTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttributedTextViewController.xib; sourceTree = "<group>"; };
+		6720E7EB208B8C9000D07850 /* IntroductionContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionContent.swift; sourceTree = "<group>"; };
+		6720E7ED208B8D7400D07850 /* InstructionsContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsContent.swift; sourceTree = "<group>"; };
 		672771C4208B4B8700256933 /* InstallationInstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationInstructionsViewController.swift; sourceTree = "<group>"; };
 		672771C5208B4B8700256933 /* InstallationInstructionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstallationInstructionsViewController.xib; sourceTree = "<group>"; };
 		672771CA208B4BFB00256933 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -155,13 +159,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		672771C3208B4B6C00256933 /* Introduction */ = {
+		6720E7EA208B8C7B00D07850 /* Content */ = {
 			isa = PBXGroup;
 			children = (
-				672771BF208B486F00256933 /* IntroductionViewController.swift */,
-				672771C0208B486F00256933 /* IntroductionViewController.xib */,
+				6720E7E4208B827C00D07850 /* ContentBuilder.swift */,
+				6720E7EB208B8C9000D07850 /* IntroductionContent.swift */,
+				6720E7ED208B8D7400D07850 /* InstructionsContent.swift */,
 			);
-			path = Introduction;
+			path = Content;
 			sourceTree = "<group>";
 		};
 		672771C8208B4B9D00256933 /* Installation Instructions */ = {
@@ -210,8 +215,9 @@
 			children = (
 				67A3C06F207822B000E93876 /* AppDelegate.swift */,
 				67A3C071207822B000E93876 /* ViewController.swift */,
-				6720E7E4208B827C00D07850 /* ContentBuilder.swift */,
-				672771C3208B4B6C00256933 /* Introduction */,
+				6720E7EA208B8C7B00D07850 /* Content */,
+				6720E7E6208B8B9600D07850 /* AttributedTextViewController.swift */,
+				6720E7E7208B8B9600D07850 /* AttributedTextViewController.xib */,
 				672771C8208B4B9D00256933 /* Installation Instructions */,
 				672771C9208B4BE900256933 /* About */,
 				67A3C073207822B000E93876 /* Assets.xcassets */,
@@ -399,10 +405,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6720E7E9208B8B9600D07850 /* AttributedTextViewController.xib in Resources */,
 				67A3C074207822B000E93876 /* Assets.xcassets in Resources */,
 				672771C7208B4B8700256933 /* InstallationInstructionsViewController.xib in Resources */,
 				67A3C077207822B000E93876 /* Main.storyboard in Resources */,
-				672771C2208B486F00256933 /* IntroductionViewController.xib in Resources */,
 				672771CD208B4BFB00256933 /* AboutViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,8 +576,10 @@
 				67A3C0AE207A852D00E93876 /* String+Extensions.swift in Sources */,
 				672771C6208B4B8700256933 /* InstallationInstructionsViewController.swift in Sources */,
 				6720E7E3208B7E1700D07850 /* CommentUnwrapper.swift in Sources */,
+				6720E7EE208B8D7400D07850 /* InstructionsContent.swift in Sources */,
+				6720E7E8208B8B9600D07850 /* AttributedTextViewController.swift in Sources */,
 				67A3C070207822B000E93876 /* AppDelegate.swift in Sources */,
-				672771C1208B486F00256933 /* IntroductionViewController.swift in Sources */,
+				6720E7EC208B8C9000D07850 /* IntroductionContent.swift in Sources */,
 				672771CC208B4BFB00256933 /* AboutViewController.swift in Sources */,
 				6720E7E2208B7E1200D07850 /* CommentWrapper.swift in Sources */,
 				6720E7E5208B827C00D07850 /* ContentBuilder.swift in Sources */,

@@ -1,27 +1,17 @@
 //
-//  IntroductionViewController.swift
+//  IntroductionContent.swift
 //  CommentWrapper
 //
 //  Created by Steve Barnegren on 21/04/2018.
 //  Copyright © 2018 Steve Barnegren. All rights reserved.
 //
 
-import Cocoa
+import Foundation
 import AttributedStringBuilder
 
-class IntroductionViewController: NSViewController {
+class IntroductionContent {
     
-    @IBOutlet fileprivate var textView: NSTextView!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        textView.isSelectable = false
-        textView.isEditable = false
-        textView.textStorage?.append(makeAttributedString())
-    }
-    
-    func makeAttributedString() -> NSAttributedString {
+    static func makeAttributedString() -> NSAttributedString {
         
         return AttributedStringBuilder()
             .attributedText( makeIntroductionAttributedString() )
@@ -34,7 +24,7 @@ class IntroductionViewController: NSViewController {
             .attributedString
     }
     
-    private func makeIntroductionAttributedString() -> NSAttributedString {
+    private static func makeIntroductionAttributedString() -> NSAttributedString {
         
         return ContentBuilder()
             .title("Comment Wrapper")
@@ -44,14 +34,14 @@ class IntroductionViewController: NSViewController {
             .attributedString
     }
     
-    private func makeWrappingSectionAttributedString() -> NSAttributedString {
+    private static func makeWrappingSectionAttributedString() -> NSAttributedString {
         
         let originalComment = """
             /// This is a long comment that descripes some behavior. Long comments are difficult to read because they become very long horizontally. We often place limits on how many columns wide our code should be in order to improve readablity, but this can be more difficult to achieve with comments
             """
         let wrappedComment = CommentWrapper.wrap(string: originalComment, lineLength: 80)
         
-         return ContentBuilder()
+        return ContentBuilder()
             .title("Wrapping Comments")
             .body("""
             You might have a comment that looks like this:
@@ -62,7 +52,7 @@ class IntroductionViewController: NSViewController {
             .attributedString
     }
     
-    private func makeUnwrappingSectionAttributedString() -> NSAttributedString {
+    private static func makeUnwrappingSectionAttributedString() -> NSAttributedString {
         
         return ContentBuilder()
             .title("Unwrapping Comments")
@@ -72,7 +62,7 @@ class IntroductionViewController: NSViewController {
             .attributedString
     }
     
-    private func makeReWrappingSectionAttributedString() -> NSAttributedString {
+    private static func makeReWrappingSectionAttributedString() -> NSAttributedString {
         
         let lineLength = 60
         
@@ -96,7 +86,4 @@ class IntroductionViewController: NSViewController {
             .comment(rewrappedComment)
             .attributedString
     }
-    
-    
-
 }

@@ -5,8 +5,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="InstallationInstructionsViewController" customModule="CommentWrapper" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="AttributedTextViewController" customModule="CommentWrapper" customModuleProvider="target">
             <connections>
+                <outlet property="textView" destination="Ivw-mz-shB" id="a7u-le-Liz"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -16,13 +17,13 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhG-Ks-gSG">
+                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84h-BD-Caw">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
-                    <clipView key="contentView" id="q5t-8p-4MO">
+                    <clipView key="contentView" id="BWC-fh-Xzz">
                         <rect key="frame" x="1" y="1" width="478" height="270"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="FM1-Ur-8Vu">
+                            <textView importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Ivw-mz-shB">
                                 <rect key="frame" x="0.0" y="0.0" width="478" height="270"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -33,21 +34,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </clipView>
-                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="PNj-qv-NCK">
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="zNG-dB-zqH">
                         <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="fSL-Zl-gds">
+                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="gh8-zb-0sp">
                         <rect key="frame" x="463" y="1" width="16" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
             </subviews>
             <constraints>
-                <constraint firstItem="vhG-Ks-gSG" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Hcb-E7-Dyf"/>
-                <constraint firstAttribute="bottom" secondItem="vhG-Ks-gSG" secondAttribute="bottom" id="ilw-fX-02Z"/>
-                <constraint firstItem="vhG-Ks-gSG" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="pzi-Ow-H9O"/>
-                <constraint firstAttribute="trailing" secondItem="vhG-Ks-gSG" secondAttribute="trailing" id="vba-Ff-ILm"/>
+                <constraint firstAttribute="trailing" secondItem="84h-BD-Caw" secondAttribute="trailing" id="JEf-Ai-sa9"/>
+                <constraint firstItem="84h-BD-Caw" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="KCN-bc-hn0"/>
+                <constraint firstItem="84h-BD-Caw" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="dgP-MQ-tUL"/>
+                <constraint firstAttribute="bottom" secondItem="84h-BD-Caw" secondAttribute="bottom" id="qGS-l9-TEh"/>
             </constraints>
         </customView>
     </objects>

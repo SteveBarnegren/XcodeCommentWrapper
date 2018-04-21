@@ -64,13 +64,15 @@ class ViewController: NSViewController {
         
         switch type {
         case .introduction:
-            let introduction = IntroductionViewController(nibName: NSNib.Name(rawValue: "IntroductionViewController"),
-                                                          bundle: nil)
+            let attributedString = IntroductionContent.makeAttributedString()
+            let introduction = AttributedTextViewController(attributedString: attributedString)
             displayContent(viewController: introduction)
+            
         case .installationInstructions:
-            let installationInstructions = InstallationInstructionsViewController(nibName: NSNib.Name(rawValue: "InstallationInstructionsViewController"),
-                                                                                  bundle: nil)
-            displayContent(viewController: installationInstructions)
+            let attributedString = InstructionsContent.makeAttributedString()
+            let instructions = AttributedTextViewController(attributedString: attributedString)
+            displayContent(viewController: instructions)
+            
         case .about:
             let about = AboutViewController(nibName: NSNib.Name(rawValue: "AboutViewController"), bundle: nil)
             displayContent(viewController: about)
