@@ -16,6 +16,8 @@ class AboutViewController: NSViewController {
     @IBOutlet private var websiteButton: NSButton!
     @IBOutlet private var twitterButton: NSButton!
     @IBOutlet private var githubButton: NSButton!
+    @IBOutlet private var contactButton: NSButton!
+    @IBOutlet private var githubIssueButton: NSButton!
 
     // MARK: - UIViewController
     
@@ -26,7 +28,7 @@ class AboutViewController: NSViewController {
     
     func styleButtons() {
         
-        [websiteButton, twitterButton, githubButton].forEach {
+        [websiteButton, twitterButton, githubButton, contactButton, githubIssueButton].forEach {
             
             let text = $0!.title
             let font = $0!.font!
@@ -57,6 +59,18 @@ class AboutViewController: NSViewController {
     
     @IBAction private func githubButtonPressed(sender: NSButton) {
         if let url = URL(string: "https://github.com/SteveBarnegren/XcodeCommentWrapper") {
+            NSWorkspace.shared.open(url)
+        }
+    }
+    
+    @IBAction private func contactButtonPressed(sender: NSButton) {
+        if let url = URL(string: "https://www.stevebarnegren.com/contact-1") {
+            NSWorkspace.shared.open(url)
+        }
+    }
+    
+    @IBAction private func githubIssueButtonPressed(sender: NSButton) {
+        if let url = URL(string: "https://github.com/SteveBarnegren/XcodeCommentWrapper/issues/new") {
             NSWorkspace.shared.open(url)
         }
     }
