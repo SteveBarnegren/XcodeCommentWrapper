@@ -21,6 +21,8 @@ class IntroductionContent {
             .attributedText( makeUnwrappingSectionAttributedString() )
             .newlines(3)
             .attributedText( makeReWrappingSectionAttributedString() )
+            .newlines(3)
+            .attributedText( makeFeaturesSectionAttributedString() )
             .attributedString
     }
     
@@ -29,7 +31,7 @@ class IntroductionContent {
         return ContentBuilder()
             .title("Comment Wrapper")
             .body("""
-            Comment Wrapper is an Xcode source editor extension that can format comments to wrap at a a certain line length.
+            Comment Wrapper is an Xcode source editor extension that can format comments to wrap at a certain line length.
             """)
             .attributedString
     }
@@ -86,4 +88,15 @@ class IntroductionContent {
             .comment(rewrappedComment)
             .attributedString
     }
+    
+    private static func makeFeaturesSectionAttributedString() -> NSAttributedString {
+        
+        return ContentBuilder()
+            .title("Other stuff:")
+            .body("- Comment Wrapper will preserve your comment prefix, whether it's '//' or '///'")
+            .body("- This make Comment Wrapper great for formatting your inline documentation!")
+            .body("- Comment Wrapper understands when you're using example code in your inline documentation, so it won't wrap your code")
+            .attributedString
+    }
+
 }
