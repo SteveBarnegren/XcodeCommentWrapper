@@ -708,11 +708,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="CommentWrapper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="739" height="577"/>
+                        <rect key="frame" x="0.0" y="0.0" width="740" height="577"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z7P-pC-i2X">
-                                <rect key="frame" x="305" y="428" width="129" height="129"/>
+                                <rect key="frame" x="306" y="428" width="129" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="z7P-pC-i2X" secondAttribute="height" multiplier="1:1" id="7xC-bE-pBM"/>
                                     <constraint firstAttribute="height" constant="129" id="z60-cs-a4q"/>
@@ -720,7 +720,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Icon" id="sPT-Sm-hye"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KWp-l9-yTq">
-                                <rect key="frame" x="308" y="403" width="123" height="17"/>
+                                <rect key="frame" x="309" y="403" width="123" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Comment Wrapper" id="qZg-9S-v48">
                                     <font key="font" metaFont="systemSemibold" size="13"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -728,7 +728,11 @@
                                 </textFieldCell>
                             </textField>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="dbu-6u-I9e">
-                                <rect key="frame" x="20" y="20" width="699" height="322"/>
+                                <rect key="frame" x="20" y="20" width="700" height="322"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="QED-Z9-m0l"/>
+                                    <constraint firstAttribute="width" constant="700" id="dPd-qn-DGX"/>
+                                </constraints>
                             </customView>
                             <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c85-CW-ted">
                                 <rect key="frame" x="251" y="360" width="238" height="24"/>
