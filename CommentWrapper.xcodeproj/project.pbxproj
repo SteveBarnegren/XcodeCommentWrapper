@@ -96,7 +96,7 @@
 		672771CB208B4BFB00256933 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		678F0EDF20853DB300D94D9D /* ItemizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemizerTests.swift; sourceTree = "<group>"; };
 		678F0EE120853EE400D94D9D /* StringItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringItemTests.swift; sourceTree = "<group>"; };
-		67A3C06C207822B000E93876 /* CommentWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommentWrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67A3C06C207822B000E93876 /* Comment Wrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Comment Wrapper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A3C06F207822B000E93876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67A3C071207822B000E93876 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		67A3C073207822B000E93876 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 		67A3C06D207822B000E93876 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				67A3C06C207822B000E93876 /* CommentWrapper.app */,
+				67A3C06C207822B000E93876 /* Comment Wrapper.app */,
 				67A3C07E207822B100E93876 /* CommentWrapperTests.xctest */,
 				67A3C091207822DD00E93876 /* Comment Wrapper.appex */,
 			);
@@ -304,7 +304,7 @@
 			);
 			name = "Comment Wrapper Host";
 			productName = CommentWrapper;
-			productReference = 67A3C06C207822B000E93876 /* CommentWrapper.app */;
+			productReference = 67A3C06C207822B000E93876 /* Comment Wrapper.app */;
 			productType = "com.apple.product-type.application";
 		};
 		67A3C07D207822B100E93876 /* CommentWrapperTests */ = {
@@ -701,7 +701,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CommentWrapper/CommentWrapper.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VAA3W4LPY2;
@@ -709,8 +709,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapper;
 				PRODUCT_NAME = "Comment Wrapper";
-				PROVISIONING_PROFILE = "b08a48ba-3ea8-488b-a6f7-4f611e75051d";
-				PROVISIONING_PROFILE_SPECIFIER = "XcodeCommentWrapper-macOS-AdHoc";
+				PROVISIONING_PROFILE = "a784e065-e7bf-4953-9d51-3adf4f335aab";
+				PROVISIONING_PROFILE_SPECIFIER = "XcodeCommentWrapper-macOS-Development";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -741,12 +741,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VAA3W4LPY2;
 				INFOPLIST_FILE = CommentWrapperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SteveBarnegren.CommentWrapperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Comment Wrapper.app/Contents/MacOS/Comment Wrapper";
 			};
@@ -757,12 +760,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VAA3W4LPY2;
 				INFOPLIST_FILE = CommentWrapperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SteveBarnegren.CommentWrapperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Comment Wrapper.app/Contents/MacOS/Comment Wrapper";
 			};
@@ -773,7 +779,7 @@
 			baseConfigurationReference = 2ED9DC05841C8ACDB6EE7C50 /* Pods-Comment Wrapper.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = CommentWrapperExt/CommentWrapperExt.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VAA3W4LPY2;
@@ -781,8 +787,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapperext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "09b44ae6-a2ad-462d-b720-4ab39eb1263e";
-				PROVISIONING_PROFILE_SPECIFIER = "XcodeCommentWrapperExt-macOS-AdHoc";
+				PROVISIONING_PROFILE = "6124f69c-ec06-4601-82c5-7b59a9be6f1c";
+				PROVISIONING_PROFILE_SPECIFIER = "XcodeCommentWrapperExt-macOS-Development";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 			};
