@@ -6,6 +6,8 @@
 //  Copyright © 2018 Steve Barnegren. All rights reserved.
 //
 
+// swiftlint:disable redundant_void_return
+
 import Foundation
 import XcodeKit
 
@@ -54,8 +56,10 @@ enum Action: String {
 
 class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     
-    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
-        // Implement your command here, invoking the completion handler when done. Pass it nil on success, and an NSError on failure.
+    func perform(with invocation: XCSourceEditorCommandInvocation,
+                 completionHandler: @escaping (Error?) -> Void ) -> Void {
+        // Implement your command here, invoking the completion handler when done. Pass it
+        // nil on success, and an NSError on failure.
         
         guard let action = Action(rawValue: invocation.commandIdentifier) else {
             print("Unknown action")

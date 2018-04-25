@@ -22,7 +22,7 @@ class CommentUnwrapper {
         return unwrappedString(fromItems: items)
             .lines()
             .map {
-                if ($0.isEmpty == false) {
+                if $0.isEmpty == false {
                     return prefix + $0
                 } else {
                     return $0

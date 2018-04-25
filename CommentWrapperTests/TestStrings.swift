@@ -8,6 +8,8 @@
 
 import Foundation
 
+// swiftlint:disable line_length
+
 class TestStrings {
     
     static var alphabeticalAnimals: String {
