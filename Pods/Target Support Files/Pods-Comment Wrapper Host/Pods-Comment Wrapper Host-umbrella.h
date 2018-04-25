@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_CommentWrapperVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_CommentWrapperVersionString[];
+FOUNDATION_EXPORT double Pods_Comment_Wrapper_HostVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Comment_Wrapper_HostVersionString[];
 

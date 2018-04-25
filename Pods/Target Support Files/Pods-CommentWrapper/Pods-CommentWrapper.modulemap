@@ -1,6 +1,0 @@
-framework module Pods_CommentWrapper {
-  umbrella header "Pods-CommentWrapper-umbrella.h"
-
-  export *
-  module * { export * }
-}

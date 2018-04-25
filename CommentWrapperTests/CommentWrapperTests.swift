@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import CommentWrapper
+@testable import Comment_Wrapper
 
 /*
  ant

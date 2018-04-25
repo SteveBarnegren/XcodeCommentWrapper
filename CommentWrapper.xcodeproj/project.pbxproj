@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45ADB32CFC98D59469ADEF3F /* Pods_CommentWrapperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32D96A8A516F1DE7B9DE6D5 /* Pods_CommentWrapperTests.framework */; };
+		3CB49450D2A07D14076E198F /* Pods_Comment_Wrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D5242B13CED07EDB24648B /* Pods_Comment_Wrapper.framework */; };
 		6720E7E2208B7E1200D07850 /* CommentWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0A32078260E00E93876 /* CommentWrapper.swift */; };
 		6720E7E3208B7E1700D07850 /* CommentUnwrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0B6207A89F700E93876 /* CommentUnwrapper.swift */; };
 		6720E7E5208B827C00D07850 /* ContentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720E7E4208B827C00D07850 /* ContentBuilder.swift */; };
@@ -47,8 +47,7 @@
 		67A3C0BC207A8B8900E93876 /* Itemizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0B9207A8AE600E93876 /* Itemizer.swift */; };
 		67A3C0BE207A8D3E00E93876 /* CommentUnwrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0BD207A8D3E00E93876 /* CommentUnwrapperTests.swift */; };
 		67A3C0C0207A8D5B00E93876 /* TestStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0BF207A8D5B00E93876 /* TestStrings.swift */; };
-		8873D690FD2917602489ACA7 /* Pods_CommentWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028C140B1114402741DEC3E5 /* Pods_CommentWrapper.framework */; };
-		EEDAA6D32A6B137E46349E37 /* Pods_Comment_Wrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8AAB9CFC03567B02B1EEF1 /* Pods_Comment_Wrapper.framework */; };
+		DD41C790D3991F3D722D6729 /* Pods_Comment_Wrapper_Host.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F5C2E994FBD856C30E1D43 /* Pods_Comment_Wrapper_Host.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,10 +82,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		028C140B1114402741DEC3E5 /* Pods_CommentWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommentWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		35E3C3C8B355FAD48A618C54 /* Pods-Comment Wrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comment Wrapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Comment Wrapper/Pods-Comment Wrapper.debug.xcconfig"; sourceTree = "<group>"; };
-		3902CE9BF190914279C5C9CA /* Pods-CommentWrapperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommentWrapperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CommentWrapperTests/Pods-CommentWrapperTests.release.xcconfig"; sourceTree = "<group>"; };
-		5C790BC00E7E4EB185A99F09 /* Pods-CommentWrapperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommentWrapperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CommentWrapperTests/Pods-CommentWrapperTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1D71F46C3D72B4C88CAA6C73 /* Pods-Comment Wrapper Host.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comment Wrapper Host.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Comment Wrapper Host/Pods-Comment Wrapper Host.debug.xcconfig"; sourceTree = "<group>"; };
+		2ED9DC05841C8ACDB6EE7C50 /* Pods-Comment Wrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comment Wrapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Comment Wrapper/Pods-Comment Wrapper.debug.xcconfig"; sourceTree = "<group>"; };
+		39F5C2E994FBD856C30E1D43 /* Pods_Comment_Wrapper_Host.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comment_Wrapper_Host.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6720E7E4208B827C00D07850 /* ContentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBuilder.swift; sourceTree = "<group>"; };
 		6720E7E6208B8B9600D07850 /* AttributedTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedTextViewController.swift; sourceTree = "<group>"; };
 		6720E7E7208B8B9600D07850 /* AttributedTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttributedTextViewController.xib; sourceTree = "<group>"; };
@@ -123,11 +121,9 @@
 		67A3C0B9207A8AE600E93876 /* Itemizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itemizer.swift; sourceTree = "<group>"; };
 		67A3C0BD207A8D3E00E93876 /* CommentUnwrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentUnwrapperTests.swift; sourceTree = "<group>"; };
 		67A3C0BF207A8D5B00E93876 /* TestStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStrings.swift; sourceTree = "<group>"; };
-		8C6EDAB4B134FD72D9E33116 /* Pods-CommentWrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommentWrapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CommentWrapper/Pods-CommentWrapper.debug.xcconfig"; sourceTree = "<group>"; };
-		BB8AAB9CFC03567B02B1EEF1 /* Pods_Comment_Wrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comment_Wrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D32D96A8A516F1DE7B9DE6D5 /* Pods_CommentWrapperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommentWrapperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5DAF995A2E1EB4D79D1EFC5 /* Pods-CommentWrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommentWrapper.release.xcconfig"; path = "Pods/Target Support Files/Pods-CommentWrapper/Pods-CommentWrapper.release.xcconfig"; sourceTree = "<group>"; };
-		F4C3DDAA381B45000238588E /* Pods-Comment Wrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comment Wrapper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Comment Wrapper/Pods-Comment Wrapper.release.xcconfig"; sourceTree = "<group>"; };
+		70514E07FAB7A063E8FD2C59 /* Pods-Comment Wrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comment Wrapper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Comment Wrapper/Pods-Comment Wrapper.release.xcconfig"; sourceTree = "<group>"; };
+		B7B1865D48040BD973D58066 /* Pods-Comment Wrapper Host.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comment Wrapper Host.release.xcconfig"; path = "Pods/Target Support Files/Pods-Comment Wrapper Host/Pods-Comment Wrapper Host.release.xcconfig"; sourceTree = "<group>"; };
+		C7D5242B13CED07EDB24648B /* Pods_Comment_Wrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comment_Wrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8873D690FD2917602489ACA7 /* Pods_CommentWrapper.framework in Frameworks */,
+				DD41C790D3991F3D722D6729 /* Pods_Comment_Wrapper_Host.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +139,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45ADB32CFC98D59469ADEF3F /* Pods_CommentWrapperTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67A3C094207822DD00E93876 /* Cocoa.framework in Frameworks */,
-				EEDAA6D32A6B137E46349E37 /* Pods_Comment_Wrapper.framework in Frameworks */,
+				3CB49450D2A07D14076E198F /* Pods_Comment_Wrapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +191,7 @@
 				67A3C081207822B100E93876 /* CommentWrapperTests */,
 				67A3C092207822DD00E93876 /* Frameworks */,
 				67A3C06D207822B000E93876 /* Products */,
-				EFB0F4C3599867C35DC0812D /* Pods */,
+				E678628E2B5A1FA5A3E6E40F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -247,9 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				67A3C093207822DD00E93876 /* Cocoa.framework */,
-				BB8AAB9CFC03567B02B1EEF1 /* Pods_Comment_Wrapper.framework */,
-				028C140B1114402741DEC3E5 /* Pods_CommentWrapper.framework */,
-				D32D96A8A516F1DE7B9DE6D5 /* Pods_CommentWrapperTests.framework */,
+				C7D5242B13CED07EDB24648B /* Pods_Comment_Wrapper.framework */,
+				39F5C2E994FBD856C30E1D43 /* Pods_Comment_Wrapper_Host.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -277,15 +271,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		EFB0F4C3599867C35DC0812D /* Pods */ = {
+		E678628E2B5A1FA5A3E6E40F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				35E3C3C8B355FAD48A618C54 /* Pods-Comment Wrapper.debug.xcconfig */,
-				F4C3DDAA381B45000238588E /* Pods-Comment Wrapper.release.xcconfig */,
-				8C6EDAB4B134FD72D9E33116 /* Pods-CommentWrapper.debug.xcconfig */,
-				D5DAF995A2E1EB4D79D1EFC5 /* Pods-CommentWrapper.release.xcconfig */,
-				5C790BC00E7E4EB185A99F09 /* Pods-CommentWrapperTests.debug.xcconfig */,
-				3902CE9BF190914279C5C9CA /* Pods-CommentWrapperTests.release.xcconfig */,
+				2ED9DC05841C8ACDB6EE7C50 /* Pods-Comment Wrapper.debug.xcconfig */,
+				70514E07FAB7A063E8FD2C59 /* Pods-Comment Wrapper.release.xcconfig */,
+				1D71F46C3D72B4C88CAA6C73 /* Pods-Comment Wrapper Host.debug.xcconfig */,
+				B7B1865D48040BD973D58066 /* Pods-Comment Wrapper Host.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -293,24 +285,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		67A3C06B207822B000E93876 /* CommentWrapper */ = {
+		67A3C06B207822B000E93876 /* Comment Wrapper Host */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 67A3C087207822B100E93876 /* Build configuration list for PBXNativeTarget "CommentWrapper" */;
+			buildConfigurationList = 67A3C087207822B100E93876 /* Build configuration list for PBXNativeTarget "Comment Wrapper Host" */;
 			buildPhases = (
-				385FC302B8CD32E31A265D6F /* [CP] Check Pods Manifest.lock */,
+				251A8258F24370BDE74F2679 /* [CP] Check Pods Manifest.lock */,
 				67A3C068207822B000E93876 /* Sources */,
 				67A3C069207822B000E93876 /* Frameworks */,
 				67A3C06A207822B000E93876 /* Resources */,
 				67A3C0A2207822DD00E93876 /* Embed App Extensions */,
-				5D33098BD3C30D1E1860D0DE /* [CP] Embed Pods Frameworks */,
-				C6D3F48AAC2B86B08B157A1C /* [CP] Copy Pods Resources */,
+				1B85D0C23929E647A7C8F553 /* [CP] Embed Pods Frameworks */,
+				F70358CD9481A29EC6CB1052 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				67A3C09D207822DD00E93876 /* PBXTargetDependency */,
 			);
-			name = CommentWrapper;
+			name = "Comment Wrapper Host";
 			productName = CommentWrapper;
 			productReference = 67A3C06C207822B000E93876 /* CommentWrapper.app */;
 			productType = "com.apple.product-type.application";
@@ -319,12 +311,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67A3C08A207822B100E93876 /* Build configuration list for PBXNativeTarget "CommentWrapperTests" */;
 			buildPhases = (
-				357E60B04EE68219AA05961B /* [CP] Check Pods Manifest.lock */,
 				67A3C07A207822B100E93876 /* Sources */,
 				67A3C07B207822B100E93876 /* Frameworks */,
 				67A3C07C207822B100E93876 /* Resources */,
-				89708C01B70AF2D49E3CCC60 /* [CP] Embed Pods Frameworks */,
-				EF9942F881C557127FA35DF3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -340,11 +329,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67A3C09F207822DD00E93876 /* Build configuration list for PBXNativeTarget "Comment Wrapper" */;
 			buildPhases = (
-				15E58003E3929197A49FB7AA /* [CP] Check Pods Manifest.lock */,
+				74D53C4ECE91B9663A0CF99C /* [CP] Check Pods Manifest.lock */,
 				67A3C08D207822DD00E93876 /* Sources */,
 				67A3C08E207822DD00E93876 /* Frameworks */,
 				67A3C08F207822DD00E93876 /* Resources */,
-				3DA3A9D2DF9D28E2D3EA6969 /* [CP] Copy Pods Resources */,
+				D0815EFBAF800DD6791C4E0D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -367,7 +356,7 @@
 				TargetAttributes = {
 					67A3C06B207822B000E93876 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					67A3C07D207822B100E93876 = {
 						CreatedOnToolsVersion = 9.2;
@@ -376,7 +365,7 @@
 					};
 					67A3C090207822DD00E93876 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -393,7 +382,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				67A3C06B207822B000E93876 /* CommentWrapper */,
+				67A3C06B207822B000E93876 /* Comment Wrapper Host */,
 				67A3C07D207822B100E93876 /* CommentWrapperTests */,
 				67A3C090207822DD00E93876 /* Comment Wrapper */,
 			);
@@ -430,7 +419,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15E58003E3929197A49FB7AA /* [CP] Check Pods Manifest.lock */ = {
+		1B85D0C23929E647A7C8F553 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Comment Wrapper Host/Pods-Comment Wrapper Host-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AttributedStringBuilder/AttributedStringBuilder.framework",
+				"${BUILT_PRODUCTS_DIR}/SBAutoLayout/SBAutoLayout.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AttributedStringBuilder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SBAutoLayout.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Comment Wrapper Host/Pods-Comment Wrapper Host-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		251A8258F24370BDE74F2679 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Comment Wrapper Host-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74D53C4ECE91B9663A0CF99C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -448,43 +475,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		357E60B04EE68219AA05961B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CommentWrapperTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		385FC302B8CD32E31A265D6F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CommentWrapper-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3DA3A9D2DF9D28E2D3EA6969 /* [CP] Copy Pods Resources */ = {
+		D0815EFBAF800DD6791C4E0D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -499,42 +490,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Comment Wrapper/Pods-Comment Wrapper-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5D33098BD3C30D1E1860D0DE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CommentWrapper/Pods-CommentWrapper-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SBAutoLayout/SBAutoLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/AttributedStringBuilder/AttributedStringBuilder.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SBAutoLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AttributedStringBuilder.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CommentWrapper/Pods-CommentWrapper-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		89708C01B70AF2D49E3CCC60 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CommentWrapperTests/Pods-CommentWrapperTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C6D3F48AAC2B86B08B157A1C /* [CP] Copy Pods Resources */ = {
+		F70358CD9481A29EC6CB1052 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -546,22 +502,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CommentWrapper/Pods-CommentWrapper-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EF9942F881C557127FA35DF3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CommentWrapperTests/Pods-CommentWrapperTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Comment Wrapper Host/Pods-Comment Wrapper Host-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -625,7 +566,7 @@
 /* Begin PBXTargetDependency section */
 		67A3C080207822B100E93876 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 67A3C06B207822B000E93876 /* CommentWrapper */;
+			target = 67A3C06B207822B000E93876 /* Comment Wrapper Host */;
 			targetProxy = 67A3C07F207822B100E93876 /* PBXContainerItemProxy */;
 		};
 		67A3C09D207822DD00E93876 /* PBXTargetDependency */ = {
@@ -755,49 +696,48 @@
 		};
 		67A3C088207822B100E93876 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C6EDAB4B134FD72D9E33116 /* Pods-CommentWrapper.debug.xcconfig */;
+			baseConfigurationReference = 1D71F46C3D72B4C88CAA6C73 /* Pods-Comment Wrapper Host.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CommentWrapper/CommentWrapper.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VAA3W4LPY2;
 				INFOPLIST_FILE = CommentWrapper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PRODUCT_NAME = "Comment Wrapper";
+				PROVISIONING_PROFILE = "b08a48ba-3ea8-488b-a6f7-4f611e75051d";
+				PROVISIONING_PROFILE_SPECIFIER = "XcodeCommentWrapper-macOS-AdHoc";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		67A3C089207822B100E93876 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5DAF995A2E1EB4D79D1EFC5 /* Pods-CommentWrapper.release.xcconfig */;
+			baseConfigurationReference = B7B1865D48040BD973D58066 /* Pods-Comment Wrapper Host.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CommentWrapper/CommentWrapper.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VAA3W4LPY2;
 				INFOPLIST_FILE = CommentWrapper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PRODUCT_NAME = "Comment Wrapper";
+				PROVISIONING_PROFILE = "b08a48ba-3ea8-488b-a6f7-4f611e75051d";
+				PROVISIONING_PROFILE_SPECIFIER = "XcodeCommentWrapper-macOS-AdHoc";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 		67A3C08B207822B100E93876 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C790BC00E7E4EB185A99F09 /* Pods-CommentWrapperTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -808,13 +748,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SteveBarnegren.CommentWrapperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CommentWrapper.app/Contents/MacOS/CommentWrapper";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Comment Wrapper.app/Contents/MacOS/Comment Wrapper";
 			};
 			name = Debug;
 		};
 		67A3C08C207822B100E93876 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3902CE9BF190914279C5C9CA /* Pods-CommentWrapperTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -825,25 +764,25 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SteveBarnegren.CommentWrapperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CommentWrapper.app/Contents/MacOS/CommentWrapper";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Comment Wrapper.app/Contents/MacOS/Comment Wrapper";
 			};
 			name = Release;
 		};
 		67A3C0A0207822DD00E93876 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35E3C3C8B355FAD48A618C54 /* Pods-Comment Wrapper.debug.xcconfig */;
+			baseConfigurationReference = 2ED9DC05841C8ACDB6EE7C50 /* Pods-Comment Wrapper.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = CommentWrapperExt/CommentWrapperExt.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VAA3W4LPY2;
 				INFOPLIST_FILE = CommentWrapperExt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapperext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "09b44ae6-a2ad-462d-b720-4ab39eb1263e";
+				PROVISIONING_PROFILE_SPECIFIER = "XcodeCommentWrapperExt-macOS-AdHoc";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 			};
@@ -851,19 +790,19 @@
 		};
 		67A3C0A1207822DD00E93876 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4C3DDAA381B45000238588E /* Pods-Comment Wrapper.release.xcconfig */;
+			baseConfigurationReference = 70514E07FAB7A063E8FD2C59 /* Pods-Comment Wrapper.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = CommentWrapperExt/CommentWrapperExt.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VAA3W4LPY2;
 				INFOPLIST_FILE = CommentWrapperExt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapperext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "09b44ae6-a2ad-462d-b720-4ab39eb1263e";
+				PROVISIONING_PROFILE_SPECIFIER = "XcodeCommentWrapperExt-macOS-AdHoc";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 			};
@@ -881,7 +820,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		67A3C087207822B100E93876 /* Build configuration list for PBXNativeTarget "CommentWrapper" */ = {
+		67A3C087207822B100E93876 /* Build configuration list for PBXNativeTarget "Comment Wrapper Host" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67A3C088207822B100E93876 /* Debug */,
