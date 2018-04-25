@@ -52,7 +52,7 @@ class ItemizerTests: XCTestCase {
         let expected: [StringItem] = [
             .bullet, .space, .word("First"), .space, .word("item"), .newline,
             .bullet, .space, .word("Second"), .space, .word("item"), .newline,
-            .bullet, .space, .word("Third"), .space, .word("item"),
+            .bullet, .space, .word("Third"), .space, .word("item")
         ]
         
         XCTAssertEqual(Itemizer.itemize(string: input), expected)

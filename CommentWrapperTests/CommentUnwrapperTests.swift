@@ -30,7 +30,8 @@ class CommentUnwrapperTests: XCTestCase {
     
     func testUnwrapsLinesWithMultipleSpaces() {
         
-        // If this wrapped input had been generated with two spaces between each line, unwrapping will lose the double space where the line wraps
+        // If this wrapped input had been generated with two spaces between each line,
+        // unwrapping will lose the double space where the line wraps
         
         //////////////////////////////////////// <-- Guide (40 chars)
         let input = """
@@ -191,6 +192,5 @@ class CommentUnwrapperTests: XCTestCase {
         let output = CommentUnwrapper.unwrap(string: input)
         XCTAssertEqual(output, expected)
     }
-    
     
 }

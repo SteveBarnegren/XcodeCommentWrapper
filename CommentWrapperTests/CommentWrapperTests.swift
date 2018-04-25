@@ -192,7 +192,6 @@ class CommentWrapperTests: XCTestCase {
             "// - " + TestStrings.alphabeticalAnimals + "\n" +
             "// - " + TestStrings.alphabeticalAnimals
         
-        
         let expected = """
         // - ant bear cat dog emu fox gecko heron
         // iguana jellyfish koala lion monkey newt

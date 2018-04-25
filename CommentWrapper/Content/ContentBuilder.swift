@@ -49,7 +49,7 @@ class ContentBuilder {
         
         let attributes: [AttributedStringBuilder.Attribute] = [
             .font(codeFont),
-            .textColor(color),
+            .textColor(color)
         ]
         
         stringBuilder.text(string, attributes: attributes)
