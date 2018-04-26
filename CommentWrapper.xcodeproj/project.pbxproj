@@ -313,6 +313,7 @@
 			buildConfigurationList = 67A3C08A207822B100E93876 /* Build configuration list for PBXNativeTarget "CommentWrapperTests" */;
 			buildPhases = (
 				67A3C07A207822B100E93876 /* Sources */,
+				677995432092598C00B460E7 /* Swift Lint */,
 				67A3C07B207822B100E93876 /* Frameworks */,
 				67A3C07C207822B100E93876 /* Resources */,
 			);
@@ -332,6 +333,7 @@
 			buildPhases = (
 				74D53C4ECE91B9663A0CF99C /* [CP] Check Pods Manifest.lock */,
 				67A3C08D207822DD00E93876 /* Sources */,
+				677995442092599D00B460E7 /* Swift Lint */,
 				67A3C08E207822DD00E93876 /* Frameworks */,
 				67A3C08F207822DD00E93876 /* Resources */,
 				D0815EFBAF800DD6791C4E0D /* [CP] Copy Pods Resources */,
@@ -459,6 +461,34 @@
 			showEnvVarsInLog = 0;
 		};
 		675737B820912B0C00F42A2C /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		677995432092598C00B460E7 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		677995442092599D00B460E7 /* Swift Lint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
