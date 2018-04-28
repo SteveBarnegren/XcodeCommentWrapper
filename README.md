@@ -28,7 +28,7 @@ Want to edit your comments? Comment Wrapper can re-wrap edited comments
 *Either:*
 
 - Get it on the App Store (soon)
-- Download the [pre-compiled binary](https://github.com/SteveBarnegren/XcodeCommentWrapper/releases)
+- Download the [compiled app](https://github.com/SteveBarnegren/XcodeCommentWrapper/releases)
 - Compile from source
 
 *Then:*
