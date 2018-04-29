@@ -18,4 +18,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
+    
+    // MARK: - Menu Bar Actions
+    
+    @IBAction private func helpMenuContactItemSelected(sender: AnyObject) {
+        ExternalLinks.openContactForm()
+    }
+    
+    @IBAction private func helpMenuTwitterItemSelected(sender: AnyObject) {
+        ExternalLinks.openTwitterProfile()
+    }
+    
+    @IBAction private func helpMenuGitHubItemSelected(sender: AnyObject) {
+        ExternalLinks.openGitHubPage()
+    }
 }

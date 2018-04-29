@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3CB49450D2A07D14076E198F /* Pods_Comment_Wrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D5242B13CED07EDB24648B /* Pods_Comment_Wrapper.framework */; };
+		670349A92095A7C1002A1E30 /* ExternalLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670349A82095A7C1002A1E30 /* ExternalLinks.swift */; };
 		6720E7E2208B7E1200D07850 /* CommentWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0A32078260E00E93876 /* CommentWrapper.swift */; };
 		6720E7E3208B7E1700D07850 /* CommentUnwrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0B6207A89F700E93876 /* CommentUnwrapper.swift */; };
 		6720E7E5208B827C00D07850 /* ContentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720E7E4208B827C00D07850 /* ContentBuilder.swift */; };
@@ -85,6 +86,7 @@
 		1D71F46C3D72B4C88CAA6C73 /* Pods-Comment Wrapper Host.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comment Wrapper Host.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Comment Wrapper Host/Pods-Comment Wrapper Host.debug.xcconfig"; sourceTree = "<group>"; };
 		2ED9DC05841C8ACDB6EE7C50 /* Pods-Comment Wrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comment Wrapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Comment Wrapper/Pods-Comment Wrapper.debug.xcconfig"; sourceTree = "<group>"; };
 		39F5C2E994FBD856C30E1D43 /* Pods_Comment_Wrapper_Host.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comment_Wrapper_Host.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		670349A82095A7C1002A1E30 /* ExternalLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalLinks.swift; sourceTree = "<group>"; };
 		6720E7E4208B827C00D07850 /* ContentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBuilder.swift; sourceTree = "<group>"; };
 		6720E7E6208B8B9600D07850 /* AttributedTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedTextViewController.swift; sourceTree = "<group>"; };
 		6720E7E7208B8B9600D07850 /* AttributedTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttributedTextViewController.xib; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 		67A3C06E207822B000E93876 /* CommentWrapper */ = {
 			isa = PBXGroup;
 			children = (
+				670349A82095A7C1002A1E30 /* ExternalLinks.swift */,
 				67A3C06F207822B000E93876 /* AppDelegate.swift */,
 				67A3C071207822B000E93876 /* ViewController.swift */,
 				67A3C075207822B000E93876 /* Main.storyboard */,
@@ -569,6 +572,7 @@
 				672771CC208B4BFB00256933 /* AboutViewController.swift in Sources */,
 				6720E7E2208B7E1200D07850 /* CommentWrapper.swift in Sources */,
 				6720E7E5208B827C00D07850 /* ContentBuilder.swift in Sources */,
+				670349A92095A7C1002A1E30 /* ExternalLinks.swift in Sources */,
 				67A3C0BC207A8B8900E93876 /* Itemizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

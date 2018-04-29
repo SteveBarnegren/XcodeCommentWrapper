@@ -46,32 +46,22 @@ class AboutViewController: NSViewController {
     // MARK: - Actions
     
     @IBAction private func websiteButtonPressed(sender: NSButton) {
-        if let url = URL(string: "https://www.stevebarnegren.com") {
-            NSWorkspace.shared.open(url)
-        }
+        ExternalLinks.openWebsite()
     }
     
     @IBAction private func twitterButtonPressed(sender: NSButton) {
-        if let url = URL(string: "https://www.twitter.com/stevebarnegren") {
-            NSWorkspace.shared.open(url)
-        }
+        ExternalLinks.openTwitterProfile()
     }
     
     @IBAction private func githubButtonPressed(sender: NSButton) {
-        if let url = URL(string: "https://github.com/SteveBarnegren/XcodeCommentWrapper") {
-            NSWorkspace.shared.open(url)
-        }
+        ExternalLinks.openGitHubPage()
     }
     
     @IBAction private func contactButtonPressed(sender: NSButton) {
-        if let url = URL(string: "https://www.stevebarnegren.com/contact-1") {
-            NSWorkspace.shared.open(url)
-        }
+        ExternalLinks.openContactForm()
     }
     
     @IBAction private func githubIssueButtonPressed(sender: NSButton) {
-        if let url = URL(string: "https://github.com/SteveBarnegren/XcodeCommentWrapper/issues/new") {
-            NSWorkspace.shared.open(url)
-        }
+        ExternalLinks.openNewGitHubIssue()
     }
 }
