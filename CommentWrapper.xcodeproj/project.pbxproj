@@ -297,6 +297,7 @@
 				675737B820912B0C00F42A2C /* Swift Lint */,
 				67A3C069207822B000E93876 /* Frameworks */,
 				67A3C06A207822B000E93876 /* Resources */,
+				67F2723C2095B4BC004EC9C4 /* Set Build Number */,
 				67A3C0A2207822DD00E93876 /* Embed App Extensions */,
 				1B85D0C23929E647A7C8F553 /* [CP] Embed Pods Frameworks */,
 				F70358CD9481A29EC6CB1052 /* [CP] Copy Pods Resources */,
@@ -339,6 +340,7 @@
 				677995442092599D00B460E7 /* Swift Lint */,
 				67A3C08E207822DD00E93876 /* Frameworks */,
 				67A3C08F207822DD00E93876 /* Resources */,
+				675DC4002095B8F7007142A7 /* Set Build Number */,
 				D0815EFBAF800DD6791C4E0D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -477,6 +479,20 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
+		675DC4002095B8F7007142A7 /* Set Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Set Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Generate the build number using current date and time\nbuildNumber=$(date \"+%Y_%m_%d_%H_%M\")\n\n# Set the build number in plist file\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
+		};
 		677995432092598C00B460E7 /* Swift Lint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -504,6 +520,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		67F2723C2095B4BC004EC9C4 /* Set Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Set Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Generate the build number using current date and time\nbuildNumber=$(date \"+%Y_%m_%d_%H_%M\")\n\n# Set the build number in plist file\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
 		};
 		74D53C4ECE91B9663A0CF99C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -755,6 +785,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VAA3W4LPY2;
 				INFOPLIST_FILE = CommentWrapper/Info.plist;
+				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapper;
 				PRODUCT_NAME = "Comment Wrapper";
@@ -776,6 +807,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VAA3W4LPY2;
 				INFOPLIST_FILE = CommentWrapper/Info.plist;
+				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapper;
 				PRODUCT_NAME = "Comment Wrapper";
