@@ -94,9 +94,9 @@ class IntroductionContent {
     private static func makeFeaturesSectionAttributedString() -> NSAttributedString {
         
         return ContentBuilder()
-            .title("Other stuff:")
+            .title("Other features:")
             .body("- Comment Wrapper will preserve your comment prefix, whether it's '//' or '///'")
-            .body("- This make Comment Wrapper great for formatting your inline documentation!")
+            .body("- This makes Comment Wrapper great for formatting your inline documentation!")
             .body("- Comment Wrapper understands when you're using example code in your inline documentation, so it won't wrap your code")
             .attributedString
     }
