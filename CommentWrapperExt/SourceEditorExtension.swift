@@ -22,7 +22,7 @@ class SourceEditorExtension: NSObject, XCSourceEditorExtension {
         return Action.all
             .map { [XCSourceEditorCommandDefinitionKey.identifierKey: $0.identifier,
                     XCSourceEditorCommandDefinitionKey.nameKey: $0.name,
-                    XCSourceEditorCommandDefinitionKey.classNameKey: "Comment_Wrapper.SourceEditorCommand"
+                    XCSourceEditorCommandDefinitionKey.classNameKey: "Comment_Wrapper_Ext.SourceEditorCommand"
                 ]}
     }
     
