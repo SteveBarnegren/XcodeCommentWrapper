@@ -4,7 +4,7 @@
   <br> Comment Wrapper <br>
 </h1>
 
-![min](https://img.shields.io/badge/min-macOS%2010.13-lightgrey.svg)
+![min](https://img.shields.io/badge/min-macOS%2011.0-lightgrey.svg)
 
 An Xcode Source Editor extension that wraps your comments
 
@@ -27,8 +27,8 @@ Want to edit your comments? Comment Wrapper can re-wrap edited comments
 
 *Either:*
 
-- Get it on the App Store (soon)
-- Download the [compiled app](https://github.com/SteveBarnegren/XcodeCommentWrapper/releases)
+- [Get it on the App Store](https://apps.apple.com/gb/app/comment-wrapper-for-xcode/id1377998565?mt=12&itsct=apps_box&itscg=30200)
+- [Download the compiled app](https://github.com/SteveBarnegren/XcodeCommentWrapper/releases) (notarized)
 - Compile from source
 
 *Then:*
