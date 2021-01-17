@@ -70,7 +70,7 @@ class ViewController: NSViewController {
             displayContent(viewController: instructions)
             
         case .about:
-            let about = AboutViewController(nibName: NSNib.Name(rawValue: "AboutViewController"), bundle: nil)
+            let about = AboutViewController(nibName: "AboutViewController", bundle: nil)
             displayContent(viewController: about)
         }
         
@@ -80,12 +80,12 @@ class ViewController: NSViewController {
     private func displayContent(viewController: NSViewController) {
     
         contentViewController?.view.removeFromSuperview()
-        contentViewController?.removeFromParentViewController()
+        contentViewController?.removeFromParent()
         contentViewController = nil
         
         contentContainerView.addSubview(viewController.view)
         viewController.view.pinToSuperviewEdges()
-        addChildViewController(viewController)
+        addChild(viewController)
         contentViewController = viewController
     }
 }

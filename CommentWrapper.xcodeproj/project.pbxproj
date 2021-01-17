@@ -362,15 +362,18 @@
 				TargetAttributes = {
 					67A3C06B207822B000E93876 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1220;
 						ProvisioningStyle = Manual;
 					};
 					67A3C07D207822B100E93876 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1220;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 67A3C06B207822B000E93876;
 					};
 					67A3C090207822DD00E93876 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1220;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -710,7 +713,7 @@
 				PRODUCT_NAME = "Comment Wrapper";
 				PROVISIONING_PROFILE = "a784e065-e7bf-4953-9d51-3adf4f335aab";
 				PROVISIONING_PROFILE_SPECIFIER = "XcodeCommentWrapper-macOS-Development";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -734,7 +737,7 @@
 				PRODUCT_NAME = "Comment Wrapper";
 				PROVISIONING_PROFILE = "b08a48ba-3ea8-488b-a6f7-4f611e75051d";
 				PROVISIONING_PROFILE_SPECIFIER = "XcodeCommentWrapper-macOS-AdHoc";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -756,7 +759,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SteveBarnegren.CommentWrapperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Comment Wrapper.app/Contents/MacOS/Comment Wrapper";
 			};
 			name = Debug;
@@ -779,7 +782,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SteveBarnegren.CommentWrapperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Comment Wrapper.app/Contents/MacOS/Comment Wrapper";
 			};
 			name = Release;
@@ -804,7 +807,7 @@
 				PROVISIONING_PROFILE = "6124f69c-ec06-4601-82c5-7b59a9be6f1c";
 				PROVISIONING_PROFILE_SPECIFIER = "XcodeCommentWrapperExt-macOS-Development";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -828,7 +831,7 @@
 				PROVISIONING_PROFILE = "09b44ae6-a2ad-462d-b720-4ab39eb1263e";
 				PROVISIONING_PROFILE_SPECIFIER = "XcodeCommentWrapperExt-macOS-AdHoc";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

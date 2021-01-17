@@ -15,7 +15,7 @@ class AttributedTextViewController: NSViewController {
     
     init(attributedString: NSAttributedString) {
         self.attributedString = attributedString
-        super.init(nibName: NSNib.Name(rawValue: "AttributedTextViewController"), bundle: nil)
+        super.init(nibName: "AttributedTextViewController", bundle: nil)
     }
     
     required init?(coder: NSCoder) {
