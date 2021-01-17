@@ -92,9 +92,7 @@ class Itemizer {
         
         var items = [StringItem]()
         var currentWord = String()
-        
-        var currentWhitespace = [StringItem]()
-        
+                
         func storeCurrentWord() {
             if !currentWord.isEmpty {
                 items.append(.word(currentWord))
