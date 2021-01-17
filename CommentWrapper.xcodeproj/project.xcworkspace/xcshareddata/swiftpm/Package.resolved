@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AttributedStringBuilder",
+        "repositoryURL": "https://github.com/SteveBarnegren/AttributedStringBuilder",
+        "state": {
+          "branch": null,
+          "revision": "3872edbf39ec91ef49bb95a72d2825a63de19f5f",
+          "version": "1.2.0"
+        }
+      },
+      {
+        "package": "SBAutoLayout",
+        "repositoryURL": "https://github.com/SteveBarnegren/SBAutoLayout",
+        "state": {
+          "branch": null,
+          "revision": "82458d5b7a2d58df0e338f78fc2153b8e677b120",
+          "version": "1.3.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
