@@ -50,7 +50,6 @@
 		67A3C0BE207A8D3E00E93876 /* CommentUnwrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0BD207A8D3E00E93876 /* CommentUnwrapperTests.swift */; };
 		67A3C0C0207A8D5B00E93876 /* TestStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0BF207A8D5B00E93876 /* TestStrings.swift */; };
 		67ABFBBE25B445EA00DAA9DC /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67ABFBBD25B445EA00DAA9DC /* XcodeKit.framework */; };
-		67ABFBBF25B445EA00DAA9DC /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67ABFBBD25B445EA00DAA9DC /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,17 +79,6 @@
 				67A3C09E207822DD00E93876 /* Comment Wrapper.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		67ABFBC025B445EA00DAA9DC /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				67ABFBBF25B445EA00DAA9DC /* XcodeKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -337,7 +325,6 @@
 				67A3C08E207822DD00E93876 /* Frameworks */,
 				67A3C08F207822DD00E93876 /* Resources */,
 				675DC4002095B8F7007142A7 /* Set Build Number */,
-				67ABFBC025B445EA00DAA9DC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -716,6 +703,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapper;
 				PRODUCT_NAME = "Comment Wrapper";
 				PROVISIONING_PROFILE = "a784e065-e7bf-4953-9d51-3adf4f335aab";
@@ -730,7 +718,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CommentWrapper/CommentWrapper.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VAA3W4LPY2;
@@ -741,6 +729,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapper;
 				PRODUCT_NAME = "Comment Wrapper";
 				PROVISIONING_PROFILE = "b08a48ba-3ea8-488b-a6f7-4f611e75051d";
@@ -810,6 +799,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapperext;
 				PRODUCT_MODULE_NAME = Comment_Wrapper_Ext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -824,7 +814,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = CommentWrapperExt/CommentWrapperExt.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VAA3W4LPY2;
@@ -835,6 +825,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapperext;
 				PRODUCT_MODULE_NAME = Comment_Wrapper_Ext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
