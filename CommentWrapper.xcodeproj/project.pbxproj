@@ -814,7 +814,7 @@
 				);
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapperext;
-				PRODUCT_MODULE_NAME = Comment_Wrapper_Ext;
+				PRODUCT_MODULE_NAME = CommentWrapperExt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6124f69c-ec06-4601-82c5-7b59a9be6f1c";
 				PROVISIONING_PROFILE_SPECIFIER = "XcodeCommentWrapperExt-macOS-Development";
@@ -840,7 +840,7 @@
 				);
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapperext;
-				PRODUCT_MODULE_NAME = Comment_Wrapper_Ext;
+				PRODUCT_MODULE_NAME = CommentWrapperExt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "09b44ae6-a2ad-462d-b720-4ab39eb1263e";
 				PROVISIONING_PROFILE_SPECIFIER = "XcodeCommentWrapperExt-macOS-AdHoc";
