@@ -32,7 +32,7 @@ class AboutViewController: NSViewController {
             
             let text = $0!.title
             let font = $0!.font!
-            let color = NSColor.blue
+            let color = NSColor.linkColor
             
             let attributedString =
                 AttributedStringBuilder()
