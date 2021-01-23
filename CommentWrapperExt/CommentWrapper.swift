@@ -8,18 +8,6 @@
 
 import Foundation
 
-public extension Array {
-    
-    mutating func popFirst() -> Element? {
-        
-        if self.isEmpty {
-            return nil
-        } else {
-            return self.remove(at: 0)
-        }
-    }
-}
-
 class CommentWrapper {
 
     static func wrap(string: String, lineLength: Int) -> String {
@@ -58,7 +46,7 @@ class CommentWrapper {
         var reversed = Array(items.reversed())
         while let next = reversed.popLast() {
             
-            //next.debug_print()
+            // next.debug_print()
             
             switch next {
             case .word(let word):

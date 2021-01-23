@@ -13,7 +13,7 @@ import AttributedStringBuilder
 class ContentBuilder {
     
     private let stringBuilder = AttributedStringBuilder()
-    private let textColor = NSColor.black
+    private let textColor = NSColor.textColor
     private let codeFont = NSFont(name: "menlo", size: 11.5)!
     
     @discardableResult func title(_ string: String) -> ContentBuilder {

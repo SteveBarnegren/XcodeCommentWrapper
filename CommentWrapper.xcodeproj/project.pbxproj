@@ -49,7 +49,8 @@
 		67A3C0BC207A8B8900E93876 /* Itemizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0B9207A8AE600E93876 /* Itemizer.swift */; };
 		67A3C0BE207A8D3E00E93876 /* CommentUnwrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0BD207A8D3E00E93876 /* CommentUnwrapperTests.swift */; };
 		67A3C0C0207A8D5B00E93876 /* TestStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0BF207A8D5B00E93876 /* TestStrings.swift */; };
-		67ABFBBE25B445EA00DAA9DC /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67ABFBBD25B445EA00DAA9DC /* XcodeKit.framework */; };
+		D4C7432625BC392200C4FE38 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67ABFBBD25B445EA00DAA9DC /* XcodeKit.framework */; };
+		D4C7432725BC392200C4FE38 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67ABFBBD25B445EA00DAA9DC /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,17 @@
 				67A3C09E207822DD00E93876 /* Comment Wrapper.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4C7432825BC392200C4FE38 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D4C7432725BC392200C4FE38 /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -145,8 +157,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67ABFBBE25B445EA00DAA9DC /* XcodeKit.framework in Frameworks */,
 				67A3C094207822DD00E93876 /* Cocoa.framework in Frameworks */,
+				D4C7432625BC392200C4FE38 /* XcodeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +337,7 @@
 				67A3C08E207822DD00E93876 /* Frameworks */,
 				67A3C08F207822DD00E93876 /* Resources */,
 				675DC4002095B8F7007142A7 /* Set Build Number */,
+				D4C7432825BC392200C4FE38 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -801,7 +814,7 @@
 				);
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapperext;
-				PRODUCT_MODULE_NAME = Comment_Wrapper_Ext;
+				PRODUCT_MODULE_NAME = CommentWrapperExt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6124f69c-ec06-4601-82c5-7b59a9be6f1c";
 				PROVISIONING_PROFILE_SPECIFIER = "XcodeCommentWrapperExt-macOS-Development";
@@ -827,7 +840,7 @@
 				);
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapperext;
-				PRODUCT_MODULE_NAME = Comment_Wrapper_Ext;
+				PRODUCT_MODULE_NAME = CommentWrapperExt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "09b44ae6-a2ad-462d-b720-4ab39eb1263e";
 				PROVISIONING_PROFILE_SPECIFIER = "XcodeCommentWrapperExt-macOS-AdHoc";

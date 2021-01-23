@@ -11,7 +11,7 @@
 import Foundation
 import XcodeKit
 
-enum Action: String {
+enum Action: String, CaseIterable {
     case wrap40 = "commentwrapper.wrap-40"
     case wrap60 = "commentwrapper.wrap-60"
     case wrap80 = "commentwrapper.wrap-80"
@@ -47,10 +47,6 @@ enum Action: String {
         case .rewrap60: return 60
         case .rewrap80: return 80
         }
-    }
-    
-    static var all: [Action] {
-        return [Action.wrap40, .wrap60, .wrap80, .unwrap, .rewrap40, .rewrap60, .rewrap80]
     }
 }
 

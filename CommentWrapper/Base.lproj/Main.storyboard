@@ -186,7 +186,7 @@
                             </customView>
                             <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c85-CW-ted">
                                 <rect key="frame" x="251" y="360" width="238" height="24"/>
-                                <segmentedCell key="cell" borderStyle="border" alignment="left" segmentDistribution="fillEqually" style="rounded" trackingMode="selectOne" id="Gto-Cc-orR">
+                                <segmentedCell key="cell" borderStyle="border" alignment="left" segmentDistribution="fillEqually" style="capsule" trackingMode="selectOne" id="Gto-Cc-orR">
                                     <font key="font" metaFont="system"/>
                                     <segments>
                                         <segment label="What" width="77" selected="YES"/>
