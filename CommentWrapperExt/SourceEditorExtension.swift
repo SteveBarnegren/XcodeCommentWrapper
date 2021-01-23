@@ -18,11 +18,10 @@ class SourceEditorExtension: NSObject, XCSourceEditorExtension {
      */
     
     var commandDefinitions: [[XCSourceEditorCommandDefinitionKey: Any]] {
-        
-        return Action.all
+        return Action.allCases
             .map { [XCSourceEditorCommandDefinitionKey.identifierKey: $0.identifier,
                     XCSourceEditorCommandDefinitionKey.nameKey: $0.name,
-                    XCSourceEditorCommandDefinitionKey.classNameKey: "Comment_Wrapper_Ext.SourceEditorCommand"
+                    XCSourceEditorCommandDefinitionKey.classNameKey: SourceEditorCommand.className()
                 ]}
     }
     
