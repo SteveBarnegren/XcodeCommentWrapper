@@ -10,6 +10,10 @@ import Foundation
 
 extension String {
     
+    var isCodeFence: Bool {
+        self.trimmingCharacters(in: .whitespacesAndNewlines) == "```"
+    }
+
     func lines() -> [String] {
         
         if self.isEmpty {

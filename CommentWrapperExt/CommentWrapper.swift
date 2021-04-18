@@ -71,6 +71,9 @@ class CommentWrapper {
             case .code(let code):
                 whiteSpace = ""
                 currentLine.append(contentsOf: code)
+            case .markdownReferenceLink(let link):
+                whiteSpace = ""
+                currentLine.append(contentsOf: link)
             }
         }
         

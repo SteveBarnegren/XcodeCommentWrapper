@@ -206,4 +206,52 @@ class CommentWrapperTests: XCTestCase {
         let output = CommentWrapper.wrap(string: input, lineLength: 40)
         XCTAssertEqual(output, expected)
     }
+    
+    func testHandlesMarkdownLinks() {
+        
+        let input = """
+            /// iaculis eget vestibulum luctus, finibus quis odio. [Cras][1] sed lectus diam. Sed id luctus diam. Fusce posuere elit nec nisl eleifend, [id][2] interdum velit ornare. Suspendisse non sagittis mauris. Fusce elementum ipsum at ligula porttitor, ut.
+            ///
+            /// ```
+            /// import SpotifyWebAPI
+            ///
+            /// let spotify = SpotifyAPI(
+            ///     authorizationManager: AuthorizationCodeFlowPKCEManager(
+            ///         clientId: "Your Client Id", clientSecret: "Your Client Secret"
+            ///     )
+            /// )
+            /// ```
+            ///
+            /// [1]: https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-an-album-really-long
+            /// [2]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+            /// [3]: https://developer.spotify.com/documentation/general/guides/track-relinking-guide/asdfasdf
+            """
+        
+        let expected = """
+            /// iaculis eget vestibulum luctus, finibus quis odio. [Cras][1]
+            /// sed lectus diam. Sed id luctus diam. Fusce posuere elit nec
+            /// nisl eleifend, [id][2] interdum velit ornare. Suspendisse
+            /// non sagittis mauris. Fusce elementum ipsum at ligula
+            /// porttitor, ut.
+            ///
+            /// ```
+            /// import SpotifyWebAPI
+            ///
+            /// let spotify = SpotifyAPI(
+            ///     authorizationManager: AuthorizationCodeFlowPKCEManager(
+            ///         clientId: "Your Client Id", clientSecret: "Your Client Secret"
+            ///     )
+            /// )
+            /// ```
+            ///
+            /// [1]: https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-an-album-really-long
+            /// [2]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+            /// [3]: https://developer.spotify.com/documentation/general/guides/track-relinking-guide/asdfasdf
+            """
+        
+        let output = CommentWrapper.wrap(string: input, lineLength: 60)
+        XCTAssertEqual(output, expected)
+
+    }
+
 }
