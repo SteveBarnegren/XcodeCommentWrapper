@@ -68,12 +68,9 @@ class CommentWrapper {
             case .bullet:
                 whiteSpace = ""
                 currentLine.append("-")
-            case .code(let code):
+            case .code(let value), .markdownReferenceLink(let value):
                 whiteSpace = ""
-                currentLine.append(contentsOf: code)
-            case .markdownReferenceLink(let link):
-                whiteSpace = ""
-                currentLine.append(contentsOf: link)
+                currentLine.append(contentsOf: value)
             }
         }
         
