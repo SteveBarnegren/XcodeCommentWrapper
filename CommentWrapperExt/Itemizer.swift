@@ -14,6 +14,7 @@ enum StringItem {
     case newline
     case bullet
     case code(String)
+    case markdownReferenceLink(String)
     
     var isWhitespace: Bool {
         switch self {
@@ -22,6 +23,7 @@ enum StringItem {
         case .newline: return true
         case .bullet: return false
         case .code: return false
+        case .markdownReferenceLink: return false
         }
     }
     
@@ -32,6 +34,7 @@ enum StringItem {
         case .newline: print("newline")
         case .bullet: print("bullet")
         case .code(let code): print("code: \(code)")
+        case .markdownReferenceLink(let link): print("link: \(link)")
         }
     }
 }
@@ -50,6 +53,8 @@ extension StringItem: Equatable {
             return true
         case (.code(let lCode), .code(let rCode)):
             return lCode == rCode
+        case (.markdownReferenceLink(let lLink), .markdownReferenceLink(let rLink)):
+            return lLink == rLink
         default:
             return false
         }
@@ -74,13 +79,28 @@ class Itemizer {
             }
         }
         
+        var insideCodeBlock = false
+
         for line in string.lines() {
+
+            appendNewline()
             
-            if line.hasPrefix("    ") {
-                appendNewline()
+            if insideCodeBlock {
                 items.append(.code(line))
+                if line.isCodeFence {
+                    insideCodeBlock = false
+                }
+            }
+            else if line.isCodeFence {
+                insideCodeBlock = true
+                items.append(.code(line))
+            }
+
+            else if line.hasPrefix("    ") {
+                items.append(.code(line))
+            } else if isMarkdownReferenceLink(line) {
+                items.append(.markdownReferenceLink(line))
             } else {
-                appendNewline()
                 items.append(contentsOf: itemize(line: line))
             }
         }
@@ -101,21 +121,46 @@ class Itemizer {
         }
         
         for character in line {
-            if character == " " {
-                storeCurrentWord()
-                items.append(.space)
-            } else if character == "\n" {
-                storeCurrentWord()
-                items.append(.newline)
-            } else if character == "-" && currentWord.isEmpty && items.containsOnlyWhiteSpace {
-                items.append(.bullet)
-            } else {
-                currentWord.append(character)
+            
+            switch character {
+                case " ":
+                    storeCurrentWord()
+                    items.append(.space)
+                case "\n":
+                    storeCurrentWord()
+                    items.append(.newline)
+                case "-" where currentWord.isEmpty && items.containsOnlyWhiteSpace:
+                    items.append(.bullet)
+                default:
+                    currentWord.append(character)
             }
+
         }
         
         storeCurrentWord()
         
         return items
     }
+    
+    private static func isMarkdownReferenceLink(_ line: String) -> Bool {
+        
+        let trimmedLine = line.trimmingCharacters(
+            in: .whitespacesAndNewlines
+        )
+        
+        // See https://regex101.com/r/74bf6w/1
+        let regex = try! NSRegularExpression(
+            pattern: #"^\[\d+\]:\s*[^\s]+$"#
+        )
+        
+        let nsRange = NSRange(
+            trimmedLine.startIndex..<trimmedLine.endIndex,
+            in: trimmedLine
+        )
+
+        let match = regex.firstMatch(in: trimmedLine, options: [], range: nsRange)
+        return match != nil
+
+    }
+
 }

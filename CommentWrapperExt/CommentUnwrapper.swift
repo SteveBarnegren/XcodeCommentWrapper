@@ -58,17 +58,17 @@ class CommentUnwrapper {
                 commitPendingSpace()
                 spacePending = true
             case .newline:
-                if let lastItem = lastItem, case .newline = lastItem {
-                    if spacePending {
+                switch lastItem {
+                    case .newline:
+                        if spacePending {
+                            unwrappedString += "\n"
+                            spacePending = false
+                        }
                         unwrappedString += "\n"
-                        spacePending = false
-                    }
-                    
-                    unwrappedString += "\n"
-                } else if let lastItem = lastItem, case .code = lastItem {
-                    unwrappedString += "\n"
-                } else {
-                    spacePending = true
+                    case .code, .markdownReferenceLink:
+                        unwrappedString += "\n"
+                    default:
+                        spacePending = true
                 }
             case .bullet:
                 if spacePending {
@@ -77,9 +77,10 @@ class CommentUnwrapper {
                 }
                 unwrappedString += "-"
                 spacePending = false
-            case .code(let code):
-                unwrappedString.append(contentsOf: code)
+            case .code(let value), .markdownReferenceLink(let value):
+                unwrappedString.append(contentsOf: value)
             }
+            
             
             lastItem = next
         }
