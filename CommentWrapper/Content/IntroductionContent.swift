@@ -82,7 +82,7 @@ class IntroductionContent {
             .body("""
             Once you've wrapped a comment, you might want to edit it in place, although adding or removing characters an a particular line will make it too long or too short. You can use Comment Wrapper's 're-wrap' functionality to re-wrap the comment.
             """)
-            .body("Original comment (wrapped at a line length of \(lineLength):")
+            .body("Original comment (wrapped at a line length of \(lineLength)):")
             .comment(wrappedComment)
             .body("After editing:")
             .comment(editedComment)
