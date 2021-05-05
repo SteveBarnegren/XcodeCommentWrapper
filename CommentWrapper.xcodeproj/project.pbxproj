@@ -716,7 +716,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapper;
 				PRODUCT_NAME = "Comment Wrapper";
 				PROVISIONING_PROFILE = "a784e065-e7bf-4953-9d51-3adf4f335aab";
@@ -742,7 +743,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapper;
 				PRODUCT_NAME = "Comment Wrapper";
 				PROVISIONING_PROFILE = "b08a48ba-3ea8-488b-a6f7-4f611e75051d";
@@ -766,6 +768,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = SteveBarnegren.CommentWrapperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -789,6 +792,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = SteveBarnegren.CommentWrapperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -812,7 +816,8 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapperext;
 				PRODUCT_MODULE_NAME = CommentWrapperExt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -838,7 +843,8 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.xcodecommentwrapperext;
 				PRODUCT_MODULE_NAME = CommentWrapperExt;
 				PRODUCT_NAME = "$(TARGET_NAME)";

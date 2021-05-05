@@ -13,8 +13,7 @@ class CommentUnwrapperTests: XCTestCase {
     // MARK: - Unwrapping
     
     func testUnwrapsLines() {
-        
-        //////////////////////////////////////// <-- Guide (40 chars)
+        //-------------------------------------- <-- Guide (40 chars)
         let input = """
         ant bear cat dog emu fox gecko heron
         iguana jellyfish koala lion monkey newt
@@ -33,7 +32,7 @@ class CommentUnwrapperTests: XCTestCase {
         // If this wrapped input had been generated with two spaces between each line,
         // unwrapping will lose the double space where the line wraps
         
-        //////////////////////////////////////// <-- Guide (40 chars)
+        //-------------------------------------- <-- Guide (40 chars)
         let input = """
         ant  bear  cat  dog  emu  fox  gecko
         heron  iguana  jellyfish  koala  lion
@@ -57,8 +56,7 @@ class CommentUnwrapperTests: XCTestCase {
     // MARK: - Comment prefix
     
     func testHandlesCommentPrefix() {
-        
-        ////////////////////////////////////////*** <-- Guide (40 chars + 3 prefix)
+        //*---------------------------------------- <-- Guide (40 chars + 3 prefix)
         let input = """
         // ant bear cat dog emu fox gecko heron
         // iguana jellyfish koala lion monkey newt
@@ -76,7 +74,7 @@ class CommentUnwrapperTests: XCTestCase {
     
     func testHandlesNewlines() {
         
-        ////////////////////////////////////////*** <-- Guide (40 chars + 3 prefix)
+        //*---------------------------------------- <-- Guide (40 chars + 3 prefix)
         let input = """
         // ant bear cat dog emu fox gecko heron
         // iguana jellyfish koala lion monkey newt
@@ -99,7 +97,7 @@ class CommentUnwrapperTests: XCTestCase {
     
     func testHandlesCode() {
         
-        ////////////////////////////////////////*** <-- Guide (40 chars + 3 prefix)
+        //*---------------------------------------- <-- Guide (40 chars + 3 prefix)
         let input = """
         // ant bear cat dog emu fox gecko heron
         // iguana jellyfish koala lion monkey newt
@@ -127,7 +125,7 @@ class CommentUnwrapperTests: XCTestCase {
     
     func testHandlesMultipleLinesOfCode() {
         
-        ////////////////////////////////////////*** <-- Guide (40 chars + 3 prefix)
+        //*---------------------------------------- <-- Guide (40 chars + 3 prefix)
         let input = """
         // ant bear cat dog emu fox gecko heron
         // iguana jellyfish koala lion monkey newt
@@ -158,8 +156,7 @@ class CommentUnwrapperTests: XCTestCase {
     // MARK: - Bullets
     
     func testHandlesBullets() {
-        
-        ////////////////////////////////////////*** <-- Guide (40 chars + 3 prefix)
+        //*---------------------------------------- <-- Guide (40 chars + 3 prefix)
         let input = """
         // - First item
         // - Second item
@@ -172,7 +169,7 @@ class CommentUnwrapperTests: XCTestCase {
     
     func testHandlesBulletsAfterRegularComments() {
         
-        ////////////////////////////////////////*** <-- Guide (40 chars + 3 prefix)
+        //*---------------------------------------- <-- Guide (40 chars + 3 prefix)
         let input = """
         // This is a comment
         //
@@ -187,6 +184,31 @@ class CommentUnwrapperTests: XCTestCase {
         // - First item
         // - Second item
         // - Third item
+        """
+        
+        let output = CommentUnwrapper.unwrap(string: input)
+        XCTAssertEqual(output, expected)
+    }
+    
+    func testHandlesMarkdownCodeBlocks() {
+        
+        //*---------------------------------------- <-- Guide (40 chars + 3 prefix)
+        let input = """
+        // Below is some code that should not be
+        // unwrapped.
+        // ```
+        // this is the code that should not be unwrapped.
+        // ```
+        // Above is some code that should not be
+        // unwrapped.
+        """
+        
+        let expected = """
+        // Below is some code that should not be unwrapped.
+        // ```
+        // this is the code that should not be unwrapped.
+        // ```
+        // Above is some code that should not be unwrapped.
         """
         
         let output = CommentUnwrapper.unwrap(string: input)
