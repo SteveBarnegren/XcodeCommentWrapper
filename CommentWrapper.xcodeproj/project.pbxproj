@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		474458A2264B520000B30C22 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 474458A1264B520000B30C22 /* SettingsViewController.xib */; };
+		474458A4264B54E000B30C22 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474458A3264B54E000B30C22 /* SettingsViewController.swift */; };
+		474458A6264B64EA00B30C22 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474458A5264B64EA00B30C22 /* Settings.swift */; };
+		474458A7264B653700B30C22 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474458A5264B64EA00B30C22 /* Settings.swift */; };
+		474458A8264B653700B30C22 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474458A5264B64EA00B30C22 /* Settings.swift */; };
 		670349A92095A7C1002A1E30 /* ExternalLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670349A82095A7C1002A1E30 /* ExternalLinks.swift */; };
 		6720E7E2208B7E1200D07850 /* CommentWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0A32078260E00E93876 /* CommentWrapper.swift */; };
 		6720E7E3208B7E1700D07850 /* CommentUnwrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3C0B6207A89F700E93876 /* CommentUnwrapper.swift */; };
@@ -96,6 +101,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		474458A1264B520000B30C22 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		474458A3264B54E000B30C22 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		474458A5264B64EA00B30C22 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		670349A82095A7C1002A1E30 /* ExternalLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalLinks.swift; sourceTree = "<group>"; };
 		6720E7E4208B827C00D07850 /* ContentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBuilder.swift; sourceTree = "<group>"; };
 		6720E7E6208B8B9600D07850 /* AttributedTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedTextViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +173,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4744589E264B509100B30C22 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				474458A1264B520000B30C22 /* SettingsViewController.xib */,
+				474458A3264B54E000B30C22 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		6720E7EA208B8C7B00D07850 /* Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +244,7 @@
 				6720E7E7208B8B9600D07850 /* AttributedTextViewController.xib */,
 				672771C8208B4B9D00256933 /* Installation Instructions */,
 				672771C9208B4BE900256933 /* About */,
+				4744589E264B509100B30C22 /* Settings */,
 				67A3C073207822B000E93876 /* Assets.xcassets */,
 				67A3C078207822B100E93876 /* Info.plist */,
 				67A3C079207822B100E93876 /* CommentWrapper.entitlements */,
@@ -277,6 +295,7 @@
 			children = (
 				67A3C0B0207A886700E93876 /* Character+Extensions.swift */,
 				67A3C0A7207A847900E93876 /* String+Extensions.swift */,
+				474458A5264B64EA00B30C22 /* Settings.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -408,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6720E7E9208B8B9600D07850 /* AttributedTextViewController.xib in Resources */,
+				474458A2264B520000B30C22 /* SettingsViewController.xib in Resources */,
 				67A3C074207822B000E93876 /* Assets.xcassets in Resources */,
 				672771C7208B4B8700256933 /* InstallationInstructionsViewController.xib in Resources */,
 				67A3C077207822B000E93876 /* Main.storyboard in Resources */,
@@ -517,7 +537,9 @@
 				6720E7EE208B8D7400D07850 /* InstructionsContent.swift in Sources */,
 				6720E7E8208B8B9600D07850 /* AttributedTextViewController.swift in Sources */,
 				67A3C070207822B000E93876 /* AppDelegate.swift in Sources */,
+				474458A4264B54E000B30C22 /* SettingsViewController.swift in Sources */,
 				6720E7EC208B8C9000D07850 /* IntroductionContent.swift in Sources */,
+				474458A6264B64EA00B30C22 /* Settings.swift in Sources */,
 				672771CC208B4BFB00256933 /* AboutViewController.swift in Sources */,
 				6720E7E2208B7E1200D07850 /* CommentWrapper.swift in Sources */,
 				6720E7E5208B827C00D07850 /* ContentBuilder.swift in Sources */,
@@ -532,6 +554,7 @@
 			files = (
 				678F0EE020853DB300D94D9D /* ItemizerTests.swift in Sources */,
 				67A3C0AF207A855C00E93876 /* String+Extensions.swift in Sources */,
+				474458A8264B653700B30C22 /* Settings.swift in Sources */,
 				67A3C0B3207A88E800E93876 /* Character+ExtensionsTests.swift in Sources */,
 				67A3C0BE207A8D3E00E93876 /* CommentUnwrapperTests.swift in Sources */,
 				67A3C0BA207A8AE600E93876 /* Itemizer.swift in Sources */,
@@ -551,6 +574,7 @@
 			files = (
 				67A3C0B8207A89F700E93876 /* CommentUnwrapper.swift in Sources */,
 				67A3C0BB207A8AE600E93876 /* Itemizer.swift in Sources */,
+				474458A7264B653700B30C22 /* Settings.swift in Sources */,
 				67A3C0A8207A847900E93876 /* String+Extensions.swift in Sources */,
 				67A3C097207822DD00E93876 /* SourceEditorExtension.swift in Sources */,
 				67A3C0A42078260E00E93876 /* CommentWrapper.swift in Sources */,
