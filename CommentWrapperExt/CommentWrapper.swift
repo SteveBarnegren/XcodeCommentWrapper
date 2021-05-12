@@ -19,7 +19,14 @@ class CommentWrapper {
             .joined(separator: "\n")
         
         let items = Itemizer.itemize(string: unprefixedString)
-        let wrappedString = wrap(items: items, lineLength: lineLength)
+        let adjustedLineLength: Int
+        switch Settings.lineLength {
+            case .absolute:
+                adjustedLineLength = lineLength - prefix.count
+            default:
+                adjustedLineLength = lineLength
+        }
+        let wrappedString = wrap(items: items, lineLength: adjustedLineLength)
     
         let wrappedWithPrefix = wrappedString
             .lines()

@@ -17,6 +17,7 @@ class ViewController: NSViewController {
         case introduction
         case installationInstructions
         case about
+        case settings
     }
     
     // MARK: - Properties
@@ -46,6 +47,7 @@ class ViewController: NSViewController {
         case 0: showContent(type: .introduction)
         case 1: showContent(type: .installationInstructions)
         case 2: showContent(type: .about)
+        case 3: showContent(type: .settings)
         default: fatalError("Unhandled segmented control selection")
         }
     }
@@ -72,6 +74,12 @@ class ViewController: NSViewController {
         case .about:
             let about = AboutViewController(nibName: "AboutViewController", bundle: nil)
             displayContent(viewController: about)
+            
+        case .settings:
+            let settings = SettingsViewController(
+                nibName: "SettingsViewController", bundle: nil
+            )
+            displayContent(viewController: settings)
         }
         
         self.contentType = type
