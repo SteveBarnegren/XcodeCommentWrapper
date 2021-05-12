@@ -44,7 +44,7 @@ class CommentUnwrapper {
                 spacePending = false
             }
         }
-        
+                
         var reversed = Array(items.reversed())
         while let next = reversed.popLast() {
             
@@ -78,6 +78,10 @@ class CommentUnwrapper {
                 unwrappedString += "-"
                 spacePending = false
             case .code(let value), .markdownReferenceLink(let value):
+                if spacePending {
+                    unwrappedString += "\n"
+                    spacePending = false
+                }
                 unwrappedString.append(contentsOf: value)
             }
             
