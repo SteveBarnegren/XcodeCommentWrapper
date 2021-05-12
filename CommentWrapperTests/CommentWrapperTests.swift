@@ -253,5 +253,55 @@ class CommentWrapperTests: XCTestCase {
         XCTAssertEqual(output, expected)
 
     }
+    
+    func testHandleLineLengthSettings() {
+        
+        let previousLineLength = Settings.lineLength
+        defer {
+            Settings.lineLength = previousLineLength
+        }
+        
+        // indented by 8 spaces
+        let input = """
+                    // The central class in this library. Provides methods for all of the Spotify
+                    // web API endpoints and contains an authorization manager for managing the
+                    // authorization process of your application.
+            """
+        
+        let expectedAbsolute = """
+                    // The central class in this
+                    // library. Provides methods for
+                    // all of the Spotify
+                    // web API endpoints and
+                    // contains an authorization
+                    // manager for managing the
+                    // authorization process of your
+                    // application.
+            """
+        
+        let expectedExlcudingLeadingIndentation = """
+                    // The central class in this library.
+                    // Provides methods for all of the Spotify
+                    // web API endpoints and contains an
+                    // authorization manager for managing the
+                    // authorization process of your
+                    // application.
+            """
+
+        Settings.lineLength = .absolute
+        let outputAbsolute = CommentWrapper.wrap(string: input, lineLength: 40)
+        XCTAssertEqual(outputAbsolute, expectedAbsolute)
+        
+        Settings.lineLength = .excludingLeadingIndentation
+        let outputExcludingLeadingIndentation = CommentWrapper.wrap(
+            string: input, lineLength: 40
+        )
+        print(outputExcludingLeadingIndentation)
+        XCTAssertEqual(
+            outputExcludingLeadingIndentation,
+            expectedExlcudingLeadingIndentation
+        )
+
+    }
 
 }
